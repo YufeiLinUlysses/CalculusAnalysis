@@ -44,78 +44,125 @@
 Yufei Lin
 
 \noindent
-General Plan
+Problem Set 1
 
 \noindent
-Aug \(11^{th}\) 2019
+Sep \(10^{th}\) 2019
 
 \begin{center}
-\textbf{General Plan for Final Project}
+\textbf{Problem Set 1}
 \end{center}
 
 \noindent
-\textbf{I. Problem}
+\textbf{I. Propositions}
 
 \noindent
-How to make Bennington a walkable city by designing a much more convenient bike path.
+\textbf{Basic Properties of Equivalent:}
+
+(E0) If $a=b$, b can substitute a in any real formula
+
+(E1) $\forall a$, $a=a$
+
+(E2) $\forall a,b$, if $a = b$, then $b =a$
+
+(E3) $\forall a,b,c$, if $a=b$, $b=c$, then $c=a$
 
 \noindent
-\textbf{II. Architecture}
+\textbf{Basic Properties of Numbers}
+
+(P1) $a+(b+c)=(a+b)+c$
+
+(P2) $a+0=0+a=a$
+
+(P3) $a+(-a)=(-a)+a=0$
+
+(P4) $a+b=b+a$
+
+(P5) $a \cdot{(b \cdot{c})}=(a \cdot{b}) \cdot{c}$
+
+(P6) $a \cdot{1}=1\cdot{a}=a, 1\neq0$
+
+(P7) $a\cdot{a^{-1}}=a^{-1}\cdot{a}=1$, for $a \neq 0$
+
+(P8) $a\cdot{b} = b\cdot{a}$
+
+(P9) $a \cdot{(b+c)} = a\cdot{b} +a\cdot{c}$
+\\
 
 \noindent
-\textbf{i. Basic Tasks}
-
-\begin{enumerate}
-\item Investigate bike path in different cities: Beijing, Hong Kong, Burlington and New York
-\item Design the road's location and shape
-\item Make collages for Bennington bike path
-\item Make models for the bike path
-\end{enumerate}
+\textbf{II. Solutions}
 
 \noindent
-\textbf{ii. Timeline}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l | l}
-\textbf{Time} & \textbf{Task} \\
-\hline
-Oct 2019   & Finish collecting road designs from different cities  \\
-Dec 2019   & Finish designing road and making collages  \\
-Feb 2020    & Finish modelling with Rhino \\
-Apr 2020 & Finish a solid model
-\end{tabular}
-\end{table}
+Questions 6, 7, 9, 10, 13, 14, 16, 22, 24, 26
 
 \noindent
-\textbf{III. Math}
+\textbf{Question 6} $\forall a,b$: if $a \cdot{b} = 0$, then either $a=0$ or $b=0$
 
 \noindent
-\textbf{i. Basic Tasks}
-
-\begin{enumerate}
-\item Build math model for caring and repairing the road
-\end{enumerate}
+\textbf{Proof:}
 
 \noindent
-\textbf{ii. Timeline}
+First, let's assume $a=0$, from Question 5, we have proved that 0 multiplies any number is 0, then $a\cdot{b}=0$.
 
 \noindent
-Still have doubt on the tasks
+Then, let's assume $a\neq 0$. From Question 2 we have proved that if we multiply the same thing on both side of a equation, then the equation is still valid. Therefore, we could obtain, by multiplying $a^{-1}$ on both sides of the equation:\[a^{-1}\cdot{(a\cdot{b})} = a^{-1}\cdot{0} = 0\]
 
 \noindent
-\textbf{IV. Computer Science}
+By (P5), we can reformat the equation:\[(a^{-1}\cdot{a})\cdot{b} =0\]
 
 \noindent
-\textbf{i. Basic Tasks}
-
-\begin{enumerate}
-\item Write a program for recognizing how many people are currently riding on this road
-\item Write a program calculate their average speed
-\end{enumerate}
+By (P7), we have $a^{-1}\cdot{a} = 1$\[\therefore \text{ }(a^{-1}\cdot{a})\cdot{b} = 1\cdot{b} = 0\]
 
 \noindent
-\textbf{ii. Timeline}
+By (P6) we have $1\cdot{b} = b$,\[\therefore \text{ } b = 0\]
 
+\noindent
+\textbf{Question 7} $\forall a,b$: $(a+b)^2=a^2+2ab+b^2$
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+By definition of the exponentials we have $\forall a, a^2 = a\cdot{a}$
+
+\noindent
+$\therefore$ we have $(a+b)^2 = (a+b)\cdot{(a+b)}$
+\begin{align*}
+ (a+b)\cdot{(a+b)} & = (a+b)\cdot{a} + (a+b)\cdot{b} \text{ ------By(P9)}\\
+      & = a\cdot{(a+b)} + b\cdot{(a+b)} \text{ ------By(P8)}\\
+      & = a\cdot{a} + a\cdot{b} + b\cdot{a} + b\cdot{b} \text{ ------By(P9)}\\
+      & = a^2 + a\cdot{b} + a\cdot{b} + b^2 \text{ ------By(P8)}\\
+      & = a^2 + (a\cdot{b})\cdot{1} + (a\cdot{b})\cdot{1} + b^2 \text{ ------By(P6)}\\
+      & = a^2 + (a\cdot{b})\cdot{(1+1)} + b^2 \text{ ------By(P9)}\\
+      & = a^2 + (a\cdot{b})\cdot{2} + b^2 \text{ ------By(P9)}\\
+      & = a^2 + 2\cdot{(a\cdot{b})} + b^2 \text{ ------By(P8)}\\
+\end{align*}
+
+\noindent
+\textbf{Question 9} $\forall a$: $(-1)\cdot{a}=-a$
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+If we do the following: 
+\begin{align*}
+ a + (-1)\cdot{a} & = a\cdot{1} + (-1)\cdot{a} \text{ ------By(P6)}\\
+      & = a\cdot{1+(-1)} \text{ ------By(P9)}\\
+      & = a\cdot{0} \text{ ------By(P3)}\\
+      & = 0 \text{ ------By(Question 5)}
+\end{align*}
+\[\therefore \text{ } a + (-1)\cdot{a} = 0\]
+
+For $-a$, we have:
+\begin{align*}
+ -a + a & = 0 \text{ ------By(P3)}
+\end{align*}
+\[\therefore \text{ } a + (-1)\cdot{a} =  -a + a\]
+
+\noindent
+Then we add $(-a)$ on both sides, by Question 1, the equation should still be valid
+\[a  +(-a) + (-1)\cdot{a} =  -a + a +(-a)\]
+\[(-1)\cdot{a}=-a\text{ ------By(P3)}\]
 
 \end{document}
