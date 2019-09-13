@@ -261,10 +261,38 @@ Suppose$b<0$. Because we can use our symbols interchangeably, from Question 15, 
 \textbf{Proof:}
 
 \noindent
-\textbf{Question 24} $\forall a,b,c$: if $a<b$ and $c<0$, then $a\cdot{c}<b\cdot{c}$
+It's because $a<b$, therefore, $b-a\in P$. Also, because $c>0$, meaning $c-0 = c\in P$. Therefore, $c,(b-a)\in P$. From (P12), if both $c$ and $(b-a)$ belong to $P$, then $c\cdot{(b-a)}\in P$.
+
+\noindent
+Then, we have  
+\begin{align*}
+ c\cdot{(b-a)} & = c\cdot{(b+(-a))}\\
+ & = c\cdot{b}+c\cdot{(-a))}\qquad \text{By(P9)}\\
+ & = c\cdot{b} - c\cdot{a}
+\end{align*}
+
+\noindent
+Therefore, $c\cdot{b}-c\cdot{a}\in P$. So, $c\cdot{a}<c\cdot{b}$
+
+\noindent
+\textbf{Question 24} $\forall a,b,c$: if $a<b$ and $c<0$, then $b\cdot{c}<b\cdot{a}$.
 
 \noindent
 \textbf{Proof:}
+
+\noindent
+It's because $a<b$, therefore, $b-a\in P$. Also, because $c<0$, meaning $0-c=-c\in P$.  Therefore, $-c,(b-a)\in P$. From (P12), if both $-c$ and $(b-a)$ belong to $P$, then $-c\cdot{(b-a)}\in P$.
+
+\noindent
+Then, we have  
+\begin{align*}
+ -c\cdot{(b-a)} & = -c\cdot{(b+(-a))}\\
+ & = -c\cdot{b}+(-c)\cdot{(-a))}\qquad \text{By(P9)}\\
+ & = -c\cdot{b} + c\cdot{a}
+\end{align*}
+
+\noindent
+Therefore, $c\cdot{a}-c\cdot{b}\in P$. So, $c\cdot{b}<c\cdot{a}$
 
 \noindent
 \textbf{Question 26} $\forall a,b$: $|a+b|\leq|a|+|b|$
@@ -272,5 +300,58 @@ Suppose$b<0$. Because we can use our symbols interchangeably, from Question 15, 
 \noindent
 \textbf{Proof:}
 
+\noindent
+First, assume $a,b \geq 0$
+\[\therefore |a+b| = a+b, |a|+|b|=a+b\]
+
+\noindent
+$a+b=a+b$, meaning $|a+b|=|a|+|b|$ The assumption holds for $a,b\geq 0$
+
+\noindent
+Then, assume $a,b < 0$
+
+\noindent
+$|a+b| = -(a+b)=-a-b\text{ (By(P9))}, |a|+|b| = -a-b$
+Therefore, we have $|a+b|=-a-b=|a|+|b|$. And this assumption holds when $a,b < 0$.
+
+\noindent
+Assume, $a\geq 0, b\leq 0$, and $|a|\geq|b|$, it would be the same situation, when $b\geq 0, a\leq 0$, and $|b|\geq|a|$.
+
+\noindent 
+It is because $|a|\geq|b|$, then $a+b\geq0$. It means $|a+b| =a+b$, and $|a|+|b|=a-b$. Both calculations are absolute values, meaning both of them are greater than 0. 
+
+\noindent
+Then, we have  
+\begin{align*}
+ a-b-(a+b) & = a-b-a-b\qquad\text{By(P9)}\\
+ & =a-a-b-b\qquad \text{By(P4)}\\
+ & =-b-b\qquad \text{By(P3)}\\
+ & =-b+(-b)\\
+ & =-1\cdot{b}+(-1)\cdot{b}\\
+ & =(-1+(-1))\cdot{b}\qquad \text{By(P9)}\\
+ & =-2\cdot{b}\qquad \text{By(P9)}
+\end{align*}
+\[\therefore a-b-(a+b)=-2b\geq0\]
+\[\therefore |a|+|b|=a-b\geq |a+b|=a+b\]
+
+\noindent
+Assume, $a\geq 0, b\leq 0$, and $|a|\leq|b|$, it would be the same situation, when $b\geq 0, a\leq 0$, and $|b|\leq|a|$.
+
+
+\noindent 
+It is because $|a|\leq|b|$, then $a+b\leq0$. It means $|a+b| =-(a+b)$, and $|a|+|b|=a-b$. Both calculations are absolute values, meaning both of them are greater than 0. 
+
+Then, we have
+
+\begin{align*}
+ a-b-(-(a+b)) & = a-b+(a+b)\\
+ & =a+a+b-b\qquad \text{By(P4)}\\
+ & =a+a\qquad \text{By(P3)}\\
+ & =1\cdot{a}+1\cdot{a}\\
+ & =(1+1)\cdot{a}\qquad \text{By(P9)}\\
+ & =2\cdot{a}
+\end{align*}
+\[\therefore a-b-(-(a+b))=2a\geq0\]
+\[\therefore |a|+|b|=a-b\geq |a+b|=a+b\]
 
 \end{document}
