@@ -239,19 +239,16 @@ From (P2), we have $a\cdot{b} +(-0)=a\cdot{b}-0\in P$
 \textbf{Proof:}
 
 \noindent
+First make assumption for $a$ only, $b$ would be a similar procedure. 
+
+\noindent
 Suppose $a=0$, from Question 5, we have $\forall a$,$a\cdot{0}=0$. And 0 cannot be greater than 0. Therefore, $a\neq 0$.
 
 \noindent
-Assume $a < 0$.
+Assume $a < 0, b>0$. From Question 15, we have $\forall a,b if a<0, b>0, then a\cdot{b}<0$. Thus, $a>0$ and $b>0$.
 
 \noindent
-Suppose $b>0$. From Question 15, we have $\forall a,b$ if $a<0, b>0$, then $ a\cdot{b}<0$. Thus, $a<0$ and $b<0$.
-
-\noindent
-Assume $a>0$. 
-
-\noindent
-Suppose$b<0$. Because we can use our symbols interchangeably, from Question 15, we can have $\forall a,b$ if $b<0, a>0$, then $ a\cdot{b}<0$. Thus, $a>0$ and $b>0$.
+Assume $a> 0, b<0$. Because we can use our symbols interchangeably, 
 
 
 \noindent
