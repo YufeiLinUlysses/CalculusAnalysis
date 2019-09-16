@@ -272,7 +272,7 @@ Then, we have
 Therefore, $c\cdot{b}-c\cdot{a}\in P$. So, $c\cdot{a}<c\cdot{b}$
 
 \noindent
-\textbf{Question 24} $\forall a,b,c$: if $a<b$ and $c<0$, then $b\cdot{c}<b\cdot{a}$.
+\textbf{Question 24} $\forall a,b,c$: if $a<b$ and $c<0$, then $b\cdot{c}<c\cdot{a}$.
 
 \noindent
 \textbf{Proof:}
@@ -352,7 +352,6 @@ Then, we have
 \[\therefore |a|+|b|=a-b\geq |a+b|=a+b\]\\
 
 \pagebreak
-Question \#1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14.\\
 
 \noindent
 \textbf{Chap 1, Q1} 
@@ -378,6 +377,8 @@ It is because $a\neq 0$, from Question 6, $\forall a,b, if a\cdot{b}=0$, either 
 
 \noindent
 \textbf{Proof:}
+
+\noindent
 On the right hand side of the equation, we can have:
 \begin{align*}
  (x-y)(x+y) & = x(x-y)+y(x-y)\qquad \text{By(P9)}\\
@@ -412,16 +413,43 @@ When $(x-y)=0$, add $y$ on both sides, $(x-y)+y=x=0+y=y$. Therefore, $x=y$.\\
 \textbf{Proof:}
 
 \noindent
+On the right hand side of the equation, we can have:
+\begin{align*}
+ (x-y)(x^2+xy+y^2) & =(x+(-y))(x^2+xy+y^2)\\
+ & =x(x^2+xy+y^2)+(-y)(x^2+xy+y^2)\qquad \text{By(P9)}\\
+ & =x^3+x^2y+xy^2+(-y)x^2+(-y)xy+(-y)y^2\qquad\text{By(P9)}\\
+ & =x^3+x^2y+xy^2+(-x^2y)+(-xy^2)+(-y^3)\qquad\text{By(P8)}\\
+ & =x^3+(-y^3)\qquad\text{By(P3)}\\
+ & =x^3-y^3
+\end{align*}
+
+\noindent
 \textbf{(v)}$x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+x^{n-3}y^2+...+xy^{n-2}+y^{n-1})$.
 
 \noindent
 \textbf{Proof:}
 
 \noindent
+On the right hand side of the equation, we can have:\\
+ \((x-y)(x^{n-1}+x^{n-2}y+x^{n-3}y^2+...+xy^{n-2}+y^{n-1})\)
+ \begin{align*}
+ &=(x+(-y))(x^{n-1}+x^{n-2}y+x^{n-3}y^2+...+xy^{n-2}+y^{n-1})\\
+ &=x(x^{n-1}+x^{n-2}y+x^{n-3}y^2+...+xy^{n-2}+y^{n-1})\\
+ &\qquad+(-y)(x^{n-1}+x^{n-2}y+x^{n-3}y^2+...+xy^{n-2}+y^{n-1})\qquad \text{By(P9)}\\
+ &=x^n+x^{n-1}y+x^{n-2}y^2+...+x^2y^{n-2}+xy^{n-1}+(-y)x^{n-1}+...+(-y)y^{n-1}\qquad\text{By(P9)}\\
+ &=x^n+x^{n-1}y+...+xy^{n-1}+(-x^{n-1}y)+...+(-y^n)\qquad\text{By(P8)}\\
+ &=x^n+(-y^n)\qquad\text{By(P3)}\\
+ &=x^n-y^n
+ \end{align*}
+ 
+\noindent
 \textbf{(vi)}$x^3+y^3=(x+y)(x^2-xy+y^2)$.
 
 \noindent
 \textbf{Proof:}\\
+
+\noindent
+From (v), let $y=(-y) $ and $n=3$, we would have $x^3+y^3=x^3-(-y)^3$. Therefore, plugging these values into the equation and we could get: $x^3+y^3=(x+y)(x^2-xy+y^2)$. 
 
 \noindent
 \textbf{Chap 1, Q2} 
@@ -887,10 +915,24 @@ If $|x|<|y|$, $|x|-|y|<0$. It is because $|x-y|>0$, then $ |x|-|y|\leq |x-y|$. \
 \textbf{Proof: }
 
 \noindent
+It is because both sides of this inequality are absolute values, meaning both of them are greater than or equal to 0. If $x,y \geq 0$ then we would have $|(|x|-|y|)|=|x-y|$, and the claim holds
+
+\noindent
+If $x,y <0$, then on the left hand side, we have $ |(|x|-|y|)|=|-x-(-y)|=|y-x|$. If $x\geq y$, we would have $|y-x|=x-y$ and $|x-y|=x-y$. Thus, $|(|x|-|y|)|=|x-y|$. On the other hand, if $y\geq x$, it is the exactly same result. Therefore, the calim holds. 
+
+\noindent
+Futhermore, if $x\geq 0, y<0$, then we know, $|(|x|-|y|)| = |x+y|$. If $|x|\geq|y|$, then $|x-y|=x-y$ and $|x+y|=x+y$. $x-y-(x+y)=x-y-x-y=-2y > 0$ Therefore, $ |(|x|-|y|)|\leq |x-y|$. This would be the exact same proof for $y\geq 0, x<0$.\\
+
+\noindent
 \textbf{(vii)}$ |x+y+z|\leq |x|+|y|+|z|$
 
 \noindent
 \textbf{Proof: }
 
+\noindent
+From Question 26 we know that $\forall x,y$: $|x+y|\leq|x|+|y|$. Therefore, if add $|c|$ on both sides of the inequality, by (P11) we would have $|x+y|+|z|\leq |x|+|y|+|z|$. Then, for this question, we only need to prove that $|x+y+z|\leq|x+y|+|z|$. Let, $a=x+y, b= z$, then we could have $|a+b|\leq|a|+|b|$. Therefore, $|x+y+z|\leq|x+y|+|z|\leq |x|+|y|+|z|$.
+
+\noindent
+From Question 26, we know that if $|x+y| = |x|+|y|$ if $x,y$ are the same sign or either $x$ or $y$ is 0. Therefore, in this case, either $x,y,z$ are the same sign, or 2 of them ($x+y$ or $x+z$, or $y+z =0$) cancels each other. 
 
 \end{document}
