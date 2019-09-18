@@ -168,7 +168,9 @@ The claim holds.
 \end{align*}
 
 \noindent
-\textbf{3.(i)}
+\textbf{3.(a)}
+
+\noindent
 On the right hand side we have:
 \begin{align*}
 \binom n{k-1}+\binom nk
@@ -179,5 +181,115 @@ On the right hand side we have:
 &=\binom {n+1}{k}
 \end{align*}
 \[\therefore \text{Left hand side is the same as the right hand side.}\]
+
+\noindent
+\textbf{3.(b)}
+
+
+\noindent
+\textbf{5.(a)}
+
+\noindent
+Let n=0, we would have on the left hand side: $r^0=1$.
+
+\noindent
+On the right hand side, we would have:
+\begin{align*}
+\frac{1-r^{0+1}}{1-r}
+&=\frac{1-r}{1-r}\\
+&=1\\
+\end{align*}
+\[\therefore \text{Left hand side is the same as the right hand side.}\]
+The claim holds for $n=0$.
+
+\noindent
+Let $n=k$, assume $1+\dots+r^k=\frac{1-r^{k+1}}{1-r}$
+
+\noindent
+If $n=k+1$, then on the left hand side we would have:
+\begin{align*}
+1+\dots+r^k+r^{k+1}
+&=\frac{1-r^{k+1}}{1-r}+r^{k+1}\\
+&=\frac{1-r^{k+1}}{1-r}+\frac{(1-r)r^{k+1}}{1-r}\\
+&=\frac{1-r^{k+1}}{1-r}+\frac{r^{k+1}-r^{k+2}}{1-r}\\
+&=\frac{1-r^{k+1}+r^{k+1}-r^{k+2}}{1-r}\\
+&=\frac{1-r^{k+2}}{1-r}\\
+&=\frac{1-r^{(k+1)+1}}{1-r}
+\end{align*}
+On the right hand side, we have:
+$\frac{1-r^{(k+1)+1}}{1-r}$.
+\[\therefore \text{Left hand side is the same as the right hand side.}\]
+The claim holds.
+
+\noindent
+\textbf{5.(b)}
+
+\noindent
+Let $S=1+\dots+r^n$, by multiplying both sides with $r$, then we would have:
+\begin{align*}
+r\cdot{S}
+&=r\cdot{1+\dots+r^n}\\
+&=r+\dots+r^{n+1}\\
+\end{align*}
+It is because we would like to know about $S$, then we could have:
+\begin{align*}
+r\cdot{S}-S
+&=(r-1)\cdot{S}\\
+&=r+\dots+r^{n+1}-(1+\dots+r^n)\\
+&=r^{n+1}-1
+\end{align*}
+\[\therefore(r-1)\cdot{S}=r^{n+1}-1\]
+\[S=\frac{r^{n+1}-1}{r-1}=\frac{1-r^{n+1}}{1-r}\]
+
+\pagebreak
+\noindent
+\textbf{Chapter 3}
+
+\noindent
+\textbf{1.(i)}
+\begin{align*}
+f(f(x))
+&=f(\frac{1}{1+x})\\
+&=\frac{1}{1+\frac{1}{1+x}}\\
+&=\frac{1}{\frac{2+x}{1+x}}\\
+&=\frac{1+x}{2+x}
+\end{align*}
+\[\therefore x\neq -1,-2\]
+
+\noindent
+\textbf{1.(ii)}
+
+\begin{align*}
+f(\frac{1}{x})
+&=\frac{1}{1+\frac{1}{x}}\\
+&=\frac{1}{\frac{1+x}{x}}\\
+&=\frac{x}{1+x}
+\end{align*}
+\[\therefore x\neq -1\]
+
+\noindent
+\textbf{1.(iii)}
+\begin{align*}
+f(cx)
+&=\frac{1}{1+cx}
+\end{align*}
+\[\therefore x\neq -\frac{1}{c}, if c\neq 0\]
+
+\noindent
+\textbf{1.(iv)}
+\begin{align*}
+f(x+y)
+&=\frac{1}{1+x+y}
+\end{align*}
+\[\therefore x+y\neq -1\]
+
+\noindent
+\textbf{1.(v)}
+\begin{align*}
+f(x)+f(y)
+&=\frac{1}{1+x}+\frac{1}{1+y}\\
+&=\frac{2+x+y}{(1+x)(1+y)}
+\end{align*}
+\[\therefore x,y\neq -1\]
 
 \end{document}
