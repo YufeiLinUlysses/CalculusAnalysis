@@ -94,6 +94,7 @@ Let $n=k+1$, on the left hand side, we would have:
 &=\frac{(k+1)(2k+3)(k+2)}{6}
 \end{align*}
 \begin{align*}
+\phantom{1^2+\dots+k^2+(k+1)^2}
 &=\frac{(k+1)(2(k+1)+1)((k+1)+1)}{6}\\
 &=\frac{(k+1)((k+1)+1)(2(k+1)+1)}{6}\\
 \end{align*}
@@ -137,6 +138,7 @@ Let $n=k+1$, on the left hand side, we would have:
 &=(k+1)^2\cdot{(\frac{k^2}{4}+\frac{4k+4}{4})}\\
 \end{align*}
 \begin{align*}
+\phantom{1^3+\dots+k^3+(k+1)^3}
 &=(k+1)^2\cdot{(\frac{k^2+4k+4}{4}}\\
 &=(k+1)^2\cdot{(\frac{(k+2)^2}{4}}\\
 &=(k+1)^2\cdot{(\frac{(k+2)}{2})^2}\\
@@ -185,12 +187,124 @@ On the right hand side we have:
 \noindent
 \textbf{3.(b)}
 
+\noindent
+$\forall n, n \in \mathbb{Z}_{\geq 0}$,we would have by definition \(\binom nn=\binom n0=1\), which is a natural number. 
+
+\noindent
+Let $n=0$, we would have \(\binom 00=1\), and it is a natural number. The claim holds for 0. 
+
+\noindent
+Then, assume $n=m$ and \(\forall k, k\leq m, \binom mk\) is natural number.
+
+\noindent
+Let $n=m+1$, we would have \(\forall k, k<m+1, \binom {m+1}k=\binom m{k-1}+\binom m{k}\) from the theorem we prove in (a). It is because from the assumption above, we have both \(\binom m{k-1},\binom m{k}\) are natural numbers. Therefore, \(\binom {m+1}k\) is a natural number. And \(\binom {m+1}{m+1}={m+1}0=1\) by definition of a binomial coefficient. Therefore, the claim holds for all $n \in \mathbb{Z}_{\geq 0}$.
+
+\noindent
+\textbf{3.(c)}
+
+\noindent
+When choosing $k$ things out of $n$ things, we are looking at the arrangement of first $k$ things in an ordered list of $n$ things without considering their order. THerefore, first we are arranging all $n$ things, then we have $n!$ ways to do the arrangment. Then, we choose the first $k$ things and find their arrangements. Therefore, we are overcounting all such arrangements by $(n-k)!$times, since we do not care about the rest $n-k$ things' arrangements. Then we would have $\frac{n!}{(n-k)!}$ ways of arrangement left. However, we are still overcounting the arrangements $k!$ times because we do not need to know the order fo the arrangements of these $k$ things. Therefore, we have $\frac{n!}{k!\cdot{(n-k)}!}$ in total.
+
+\noindent
+\textbf{3.(d)}
+
+\noindent
+Let $n=1$, then we have on the left hand side: $(a+b)^1=a+b$ and on the right hand side: \(\binom 10 a^1+\binom 11b^1=a+b\). We have left hand side equals to the right hand side. The claim holds for $n=1$. 
+
+\noindent
+Let $n=m$, such that $(a+b)^m=a^m+\binom m1a^{m-1}b+\binom m2a^{m-2}b^2+\dots+\binom m{m-1}ab^{m-1}+b^m$ 
+
+\noindent
+Let $n=m+1$, on the left hand side we would have:
+\begin{align*}
+(a+b)^{m+1}
+&=(a+b)^m\cdot{(a+b)}\\
+&=(a^m+\binom m1a^{m-1}b+\binom m2a^{m-2}b^2+\dots+\binom m{m-1}ab^{m-1}+b^m)\cdot{(a+b)}\\
+&=a\cdot{\left(\binom m0 a^m+\binom m1a^{m-1}b+\binom m2a^{m-2}b^2+\dots+\binom m{m-1}ab^{m-1}+\binom mm b^m\right)}\\
+&\qquad+b\cdot{\left(\binom m0 a^m+\binom m1a^{m-1}b+\binom m2a^{m-2}b^2+\dots+\binom m{m-1}ab^{m-1}+\binom mm b^m\right)}\\
+&=\binom m0 a^{m+1}+\binom m1a^mb+\dots+\binom m{m-1} a^2b^{m-1} + \binom mm ab^m\\
+&\qquad+\binom m0 a^mb +\binom m1 a^mb^2+\dots+\binom m{m-1} ab^m+\binom mm b^{m+1}\\
+&=\binom m0 a^{m+1}+\left(\binom m0+\binom m1\right)a^mb+\dots+\left(\binom m{m-1}+\binom mm\right)ab^m+\binom mm b^{m+1}\\
+\end{align*}
+It's because from (a) we have proved that \(\binom n{k-1}+\binom nk=\binom {n+1}k\).Also, by definition of a binomial coefficient we know that \(\forall m, m\in \mathbb{Z}_{\geq0} \binom m0=\binom mm=1\) Therefore, on the left hand side, we should have:
+\begin{align*}
+&\qquad\binom m0 a^{m+1}+\left(\binom m0+\binom m1\right)a^mb+\dots+\left(\binom m{m-1}+\binom mm\right)ab^m+\binom mm b^{m+1}\\
+&=\binom {m+1}0 a^{m+1}+\binom {m+1} a^mb+\dots+\binom {m+1}m ab^m+b^{m+1}\\
+&=\sum_{j=0}^{m+1} \binom {m+1}j a^{m+1-j}b^j
+\end{align*}
+On the right hand side, we would have when $n=m+1$:$$\sum_{j=0}^{m+1} \binom {m+1}j a^{m+1-j}b^j$$
+\[\therefore \text{Left hand side equals to the right hand side. The claim holds.}\]
+
+\noindent
+\textbf{3.(e)}
+
+\textbf{(i)}
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+Let $n=0$, then we would have on the left hand side \(\binom 00=1\), and on the right hand side, we would have $2^0=1$. Therefore, the claim holds for $n=0$. 
+
+\noindent
+Let $n=m$ such that $$\sum_{j=0}^{m} \binom {m}j=2^m$$
+
+\noindent
+Let $n=m+1$, we would have on the left hand side:
+\begin{align*}
+\sum_{j=0}^{m+1} \binom {m+1}j
+&=\binom {m+1}0+\binom {m+1}1+\dots+\binom {m+1}{m+1}\\
+&=\binom m0+\left(\binom m0+\binom m1\right)+\dots+\left(\binom m{m-1}+\binom mm\right)+\binom {m}{m}\\
+&=\binom m0+\binom m0+\binom m1+\binom m1+\dots+\binom {m}{m}+\binom {m}{m}\\
+&=2\cdot{\left(\binom m0+\binom m1+\dots+\binom {m}{m}\right)}\\
+&=2\cdot{2^n}\\
+&=2^{n+1}
+\end{align*}
+
+\noindent
+On the right hand side, we would have $2^{m+1}$. Thus, the left hand side is equal to the right hand side. The claim holds. \\
+
+\textbf{(ii)}
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+This only holds for any number $n, n> 0$. It is because if $n=0$, this equation would be 1 instead of 0. 
+
+\noindent
+Let $n=1$, on the left hand side we would have \(\binom 10-\binom 11 = 0\). On the right hand side we have $0$. Therefore, the claim holds for $n=1$.
+
+\noindent
+Let $n=m$, assume $$\sum_{j=0}^{m} (-1)^j\cdot{\binom {m}j}=0$$
+
+\noindent
+Let $n=m+1$, we would have on the left hand side:
+\begin{align*}
+\sum_{j=0}^{m+1} (-1)^j\cdot{\binom {m+1}j} 
+&= \binom {m+1}0 - \binom {m+1}1 +\dots +(-1)^{m+1}\cdot{\binom {m+1}{m+1}}\\
+&= \binom {m}0 - \left(\binom {m}0+\binom {m}1\right) +\dots +(-1)^{m}\cdot{\left(\binom m{m-1}+\binom mm\right)}+(-1)^{m}\cdot{\binom mm}\\
+&=\binom {m}0-\binom {m}0-\binom {m}1+\dots+(-1)^{m}\cdot{\binom m{m-1}}+(-1)^{m}\cdot{\binom mm}+(-1)^{m}\cdot{\binom mm}\\
+&=0
+\end{align*}
+On the left hand side, we have $0$.
+
+\noindent
+Therefore, this claim holds for all number $n>0$.\\
+
+\textbf{(iii) and (iv)}
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+From the question above we have proved that $\sum_{j=0}^{m} (-1)^j\cdot{\binom {m}j}=0$. This means that for even binomial coefficients, it is always posivtive in this equation, and for odd coefficients, it is always negative. Therefore, we can have $\sum_{j \text{ even}} \binom {n}j=\sum_{j \text { odd}} \binom {n}j$. It is because from (i) we know $\sum_{j=0}^{m} \binom {m}j=2^n$. Thus, $\sum_{j \text{ even}} \binom {n}j=\sum_{j \text { odd}} \binom {n}j=2^{n-1}$
 
 \noindent
 \textbf{5.(a)}
 
 \noindent
-Let n=0, we would have on the left hand side: $r^0=1$.
+Let $n=0$, we would have on the left hand side: $r^0=1$.
 
 \noindent
 On the right hand side, we would have:
@@ -291,5 +405,20 @@ f(x)+f(y)
 &=\frac{2+x+y}{(1+x)(1+y)}
 \end{align*}
 \[\therefore x,y\neq -1\]
+
+\noindent
+\textbf{1.(vi)}
+
+\noindent
+$f(cx)=f(x), x\neq -1, or -c^{-1}$, then we would have $\frac{1}{1+x}=\frac{1}{1+cx}$.
+\[\therefore 1+x=1+cx\]
+\[(c-1)x=0\]
+If we only want one $x$ solution for such an equation, then we could have $(c-1)\cdot{0}=0$. Therefore, $c\in \mathbb{R}$ the equation would always hold. 
+
+\noindent
+\textbf{1.(vii)}
+
+\noindent
+If we would like to have at least two different answers for $x$ in the equation $(c-1)x=0$, then we need to have $c-1=0$. Thus, $c=1$. 
 
 \end{document}
