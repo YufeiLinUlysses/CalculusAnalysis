@@ -421,4 +421,288 @@ If we only want one $x$ solution for such an equation, then we could have $(c-1)
 \noindent
 If we would like to have at least two different answers for $x$ in the equation $(c-1)x=0$, then we need to have $c-1=0$. Thus, $c=1$. 
 
+\noindent
+\textbf{2.(i)}
+
+\noindent
+It is because for any $y$ is rational, $h(y)= 0$, and for any $y$ that is irrational, $h(y)=1$. If we would like to have $h(y)\geq y$, then we need $y\leq0, y\in \mathbb{Q}$ or $y<1, y \in \mathbb{R-Q}$.
+
+\noindent
+\textbf{2.(ii)}
+
+\noindent
+It's because we want to have $h(y)\leq g(y)$. Thus meaning for $y\in \mathbb{Q}$, $y^2\geq 0$, and for $y \in \mathbb{R-Q}, y^2\geq 1$. Therefore, $|y|\geq 0,y\in \mathbb{Q}$ or $|y|>1,y \in \mathbb{R-Q}$
+
+\noindent
+\textbf{2.(iii)}
+
+\noindent
+Suppose $z$ is a rational number, then we have $h(z)=0$, and $h(g(z))=0^2=0$. Therefore, $h(g(z))-h(z)=0$.
+Suppose $z$ is a irrational number, we would have $h(z)=1$, and $h(g(z)) = 1^2=1$. Therefore,  $h(g(z))-h(z)=0$.
+In conclusion, $h(g(z))-h(z)=0$. 
+
+\noindent
+\textbf{2.(iv)}
+
+\noindent
+For $g(w)\leq w$, we would have $w-w^2=w\cdot{(1-w)}\geq 0$. Thus, $w$ and $1-w$ should be the same sign or one of them is $0$. 
+
+\noindent
+Both of them are positive:
+\begin{align*}
+w> 0\\
+1-w> 0
+\end{align*}
+Therefore, $1>w>0$.
+
+\noindent
+Both of the are negative:
+\begin{align*}
+w< 0\\
+1-w< 0
+\end{align*}
+This is not possible, because we need $w>1$ and $w<0$.
+
+\noindent
+If one of them is $0$. Say $w$, then $w=0$. If$w-1=0$, then $w=1$.
+
+\[\therefore 1\geq w\geq 0\]
+
+\noindent
+\textbf{2.(v)}
+
+\noindent
+Suppose $g(g(e))=g(e)$, then we have $g(e^2)=e^4=e^2$. Then we have:
+\begin{align*}
+e^4-e^2=0\\
+e^2\cdot{(e^2-1)}=0\\
+e^2=0 \text{ or } e^2-1 = 0\\
+e_1=0 \text{ and } e_{2,3}=\pm 1
+\end{align*}
+
+\noindent
+\textbf{3.(i)}
+
+\noindent
+$1-x^2\geq 0$. Thus, $1\geq x^2$. Therefore, $-1\leq x\leq 1$.
+
+\noindent
+\textbf{3.(ii)}
+
+\noindent
+$1-\sqrt{1-x^2}\geq 0$, and we know $1+\sqrt{1-x^2}$. Thus, we can have:
+\begin{align*}
+(1-\sqrt{1-x^2})\cdot{1+\sqrt{1-x^2}}&\geq(1+\sqrt{1-x^2})\cdot{0}\\
+1-1+x^2&\geq 0\\
+x^2&\geq 0
+\end{align*} 
+\[\therefore x\in \mathbb{R}\]
+
+\noindent
+\textbf{3.(iii)}
+
+\noindent
+$x\neq1,2$
+
+\noindent
+\textbf{3.(iv)}
+
+\noindent
+$1-x^2\geq 0$ and $x^2-1\geq 0$. Thus, we have $1\geq x^2 and 1\leq x^2$. Therefore, $x^2=1$ and $x_{1,2}=\pm 1$. 
+
+\noindent
+\textbf{3.(v)}
+
+\noindent
+$1-x\geq 0, x-2\geq 0$. Therefore, $1\geq x$ and $x\leq 2$ It is not possible. Therefore, this function cannot happen in real number domain. 
+
+\noindent
+\textbf{4.(i)}
+
+\noindent
+We should have the following:
+\begin{align*}
+(S\circ P)(y)
+&=S(P(y))\\
+&=S(2^y)\\
+&=(2^y)^2\\
+&=2^{2y}
+\end{align*}
+
+\noindent
+\textbf{4.(ii)}
+
+\noindent
+We should have the following:
+\begin{align*}
+(S\circ s)(y)
+&=S(P(y))\\
+&=S(sin(y))\\
+&=(sin(y))^2\\
+&=sin^2(y)
+\end{align*}
+
+\noindent
+\textbf{4.(iii)}
+
+\noindent
+We should have the following:
+\begin{align*}
+(S\circ P\circ s)(t)+(s\circ P)(t)
+&=S(P(s(t)))+s(P(t))\\
+&=S(P(sin(t))) + s(2^t)\\
+&=S(2^{sin(t)})+sin(2^t)\\
+&=(2^{sin(t)})^2+sin(2^t)
+\end{align*}
+
+\noindent
+\textbf{4.(iv)}
+
+\noindent
+We should have the following:
+\begin{align*}
+s(t^3)
+&=sin(t^3)
+\end{align*}
+
+\noindent
+\textbf{5.}
+
+\noindent
+$S(x)=x^2,P(x)=2^x,s(x)=sinx$
+
+\noindent
+\textbf{5.(i)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(x)&=2^{sinx}
+&=2^(s(x))\\
+&=P(s(x))\\
+&=(P\circ s)(x)
+\end{align*}
+
+\noindent
+\textbf{5.(ii)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(x)&=sin(2^x)\\
+&=sin(P(x))\\
+&=s(P(x))\\
+&=(s\circ P)(x)
+\end{align*}
+
+\noindent
+\textbf{5.(iii)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(x)&=sin(x^2)\\
+&=sin(S(x))\\
+&=s(S(x))\\
+&=(s\circ S)(x)
+\end{align*}
+
+\noindent
+\textbf{5.(iv)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(x)&=sin^2(x)\\
+&=(sin(x))^2\\
+&=(s(x))^2\\
+&=S(s(x))\\
+&=(S\circ s)(x)
+\end{align*}
+
+\noindent
+\textbf{5.(v)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(t)&=2^{2^t}\\
+&=2^{P(t)}\\
+&=P(P(t))\\
+&=(P\circ P)(x)
+\end{align*}
+
+\pagebreak
+\noindent
+\textbf{5.(vi)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(u)&=sin(2^u+2^{u^2})\\
+&=sin(P(u)+2^S(u))\\
+&=sin(P(u)+P(S(u)))\\
+&=s(P(u)+(P\circ S)(u))\\
+&=s(P+P\circ S)(u)
+\end{align*}
+
+\noindent
+\textbf{5.(vii)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(y)&=sin(sin(sin(2^{2^{sin y}})))\\
+&=sin(sin(sin(2^{2^{s(y)}})))\\
+&=sin(sin(sin(2^{P(s(y))})))\\
+&=sin(sin(sin(P(P(s(y))))))\\
+&=s(s(s(P(P(s(y))))))\\
+&=(s\circ s\circ s\circ P\circ P\circ s)(y)
+\end{align*}
+
+\noindent
+\textbf{5.(viii)}
+
+\noindent
+We should have the following:
+\begin{align*}
+f(a)&=2^{sin^2(a)}+sin(a^2)+2^{sin(a^2+sin(a))}\\
+&=2^{s(a)^2}+sin(S(a))+2^{sin(S(a)+s(a))}\\
+&=2^{S(s(a))}+s(S(a))+2^{s(S(a)+s(a))}\\
+&=P(S(s(a)))+s(S(a))+P(s(S(a)+s(a)))\\
+&=P(S(s(a)))+s(S(a))+P(s(S(a)+s(a)))\\
+&=(P\circ S\circ s)(a)+(s\circ S)(a)+(P\circ s(S+s))(a)
+\end{align*}
+
+\noindent
+\textbf{21.(i)}
+
+\noindent
+Want to prove that if $x\neq y$, then $g(x)\neq g(y)$. Thus, showing if $g(x)=g(y)$, then $x=y$ still holds. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
