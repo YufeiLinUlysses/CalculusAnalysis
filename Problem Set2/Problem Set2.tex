@@ -675,11 +675,57 @@ f(a)&=2^{sin^2(a)}+sin(a^2)+2^{sin(a^2+sin(a))}\\
 \end{align*}
 
 \noindent
-\textbf{21.(i)}
+\textbf{21.(a)}
 
 \noindent
-Want to prove that if $x\neq y$, then $g(x)\neq g(y)$. Thus, showing if $g(x)=g(y)$, then $x=y$ still holds. 
+This is not equivalent. Let $f(x)=x^2$ and $g(x)=x,h(x)=1$. Thus, $f\circ (g+h)(x)=f(x+1)=(x+1)^2=x^2+2x+1$ and $f\circ g(x)+f\circ h(x)=f(x)+f(1)=x^2+1^2=x^2+1$. Therefore, they are not the same. 
 
+\noindent
+\textbf{21.(b)}
+We know that for any two given functions $a(x)+b(x)=(a+b)(x)$. Therefore, in this equatiion, we have on the left hand side:
+\begin{align*}
+((g+h)\circ f)(x)
+&=(g+h)(f(x))\\
+&=g(f(x))+h(f(x))\\
+&=(g\circ f)(x)+(h\circ f)(x)\\
+&=RHS
+\end{align*}
+
+\noindent
+\textbf{21.(c)}
+
+\noindent
+Let $h(x)=1/x$, then on the left hand side, we would have $1/(f\circ g)=(h\circ (f\circ g))(x)$. On the right hand side, we would have $(1/f)\circ g=((h\circ f)\circ g)(x)$. From the theroerm stating that composition of functions are associative, we know that $(h\circ (f\circ g))(x)=((h\circ f)\circ g)(x)$. Thus, LHS=RHS. 
+
+\noindent
+\textbf{21.(d)}
+
+\noindent
+This is not equivalent. For instance, let $f(x)=2, g(x) =x$. Then, on the left hand side we would have $\frac{1}{(f\circ g)(x)}=\frac{1}{f(x)}=\frac{1}{2}$. On the right hand side, we would have $(f\circ \frac{1}{g})(x)=f(1/x)=2$. Therefore, left hand side does not equal to right hand side. 
+
+\noindent
+\textbf{22.(a)}
+
+\noindent
+It is because $g(x)=(h\circ f)(x)=h(f(x))$, we would have $g(x)=h(f(x))$ and $g(y)=h(f(y))$. If $f(x)=f(y)$, then $h(f(x))=h(f(y))\rightarrow g(x)=g(y)$. Therefore, if $f(x)=f(y)$, then $g(x)=g(y)$.
+
+\noindent
+\textbf{22.(b)}
+
+\noindent
+Suppose whenever $f(x)=f(y)$, $g(x)=g(y)$. Let $h(z)$ be a function that takes in $z=f(x)$. If $f(x)=f(y)$, we would have $h(f(x))=h(f(y))$ because we know if the values of the variable is the same then the value of the function is the same. We also know that $g(x)=g(y)$, then we can say that $g(x)=h(f(x))=g(y)=h(f(y))$. Thus, $g(x)=(h\circ f)(x)$. 
+
+\noindent
+\textbf{23.(a)}
+
+\noindent
+Want to prove that if $x\neq y$, then $g(x)\neq g(y)$. Thus, showing if $g(x)=g(y)$, then $x=y$ still holds. Thus, suppose $g(x)=g(y)$, we would have $f(g(x))=f(g(y))=I(x)=I(y)=x=y$. Therefore, $x=y$.
+
+\noindent
+\textbf{23. (b)}
+
+\noindent
+Suppose $b=f(a)$, and let $a=g(x)$. From the identity function we know that all $f(g(x))=x$, meaning for all $a=g(x)$ we can have $b=f(a)=f(g(x))=x$. Also, because the domain of $I=x$ is all real numbers. Therefore, for any number $b$ there exist an $a$ such that $b=f(a)$.
 
 
 
