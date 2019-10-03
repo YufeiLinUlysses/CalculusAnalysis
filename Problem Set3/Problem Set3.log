@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.5)  30 SEP 2019 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.5)  3 OCT 2019 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -658,63 +658,37 @@ LaTeX Font Info:    Try loading font information for U+esvect on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-Overfull \hbox (20.03809pt too wide) detected at line 73
-\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr
-/m/n/12 ) \OMS/cmsy/m/n/12 ^^A [] ^^@ \OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 ^^A [
-] ^^@ \OML/cmm/m/it/12 L \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n/12 + \OML/cmm/m/i
-t/12 LM\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 
-M \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 L \OMS/cmsy/m/n/12
- ^^A [] ^^@ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 LM\OMS/cmsy/m/n/12 j \OML/cmm/m/i
-t/12 < \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ^^O[]^^O[]\OMS/cmsy/m/n/12 j \OT1/cmr
-/m/n/12 + \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr
-/m/n/12 + \OML/cmm/m/it/12 L \OMS/cmsy/m/n/12 ^^A [] ^^@ \OT1/cmr/m/n/12 2\OML/
-cmm/m/it/12 LM\OMS/cmsy/m/n/12 j
- []
-
-
-Overfull \hbox (6.70471pt too wide) detected at line 74
-\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr
-/m/n/12 ) \OMS/cmsy/m/n/12 ^^A [] ^^@ \OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 ^^A [
-] ^^@ \OML/cmm/m/it/12 L \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n/12 + \OML/cmm/m/i
-t/12 LM \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m
-/n/12 + \OML/cmm/m/it/12 L \OMS/cmsy/m/n/12 ^^A [] ^^@ \OT1/cmr/m/n/12 2\OML/cm
-m/m/it/12 LM\OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 < \OMS/cmsy/m/n/12 j\OML/cmm/m/
-it/12 ^^O[]^^O[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 ^^A [] \
-OT1/cmr/m/n/12 + \OML/cmm/m/it/12 L \OMS/cmsy/m/n/12 ^^A [] ^^@ \OT1/cmr/m/n/12
- 2\OML/cmm/m/it/12 LM\OMS/cmsy/m/n/12 j
- []
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./Problem Set3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 99.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 108.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 16948 strings out of 492982
- 314404 string characters out of 6134897
- 380369 words of memory out of 5000000
+ 16951 strings out of 492982
+ 314446 string characters out of 6134897
+ 379369 words of memory out of 5000000
  20220 multiletter control sequences out of 15000+600000
  9165 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,54p,417b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,54p,856b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msam10.pfb>
-Output written on "Problem Set3.pdf" (2 pages, 78608 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msam10.pfb>
+Output written on "Problem Set3.pdf" (2 pages, 89072 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 59 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
