@@ -103,6 +103,43 @@ Thus, we would have a new inequality:
 From there, we could say that $|f(x)\cdot{g(x)}-LM|<|\epsilon_1\epsilon_2|+|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq \epsilon$
 
 \noindent
-Assume $\epsilon_1\epsilon_2\leq \epsilon/2$. From there we know, $\epsilon_1, \epsilon_2 \leq \sqrt{\frac{\epsilon}{2}}$. On the other hand from $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq \epsilon/2$. We know that $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq |M\cdot{\epsilon_1}|+|L\cdot{\epsilon_2}|$. In order for the previous inequality to hold, we assign $|M\cdot{\epsilon_1}|<\epsilon/4$ and $|L\cdot{\epsilon_2}|<\epsilon/4$. Therefore, $\epsilon_2<\frac{\epsilon}{4\cdot{|M|}}$ and $\epsilon_1<\frac{\epsilon}{4\cdot{|L|}}$. If we have $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|L|}}, \sqrt{\frac{\epsilon}{2}})$ and $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|M|}}, \sqrt{\frac{\epsilon}{2}})$. Then, we have $\epsilon$ to be a very small number. We then have $\lim_{x\to a} f(x)\cdot{g(x)}=L\cdot{M}$.
+Assume $\epsilon_1\epsilon_2\leq \epsilon/2$. From there we know, $\epsilon_1, \epsilon_2 \leq \sqrt{\frac{\epsilon}{2}}$. On the other hand from $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq \epsilon/2$. We know that $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq |M\cdot{\epsilon_1}|+|L\cdot{\epsilon_2}|$. In order for the previous inequality to hold, we assign $|M\cdot{\epsilon_1}|<\epsilon/4$ and $|L\cdot{\epsilon_2}|<\epsilon/4$. Therefore, $\epsilon_2<\frac{\epsilon}{4\cdot{|M|}}$ and $\epsilon_1<\frac{\epsilon}{4\cdot{|L|}}$. If we have $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|L|}}, \sqrt{\frac{\epsilon}{2}})$ and $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|M|}}, \sqrt{\frac{\epsilon}{2}})$. Then, we have $\epsilon$ to be a very small number. We then have $\lim_{x\to a} f(x)\cdot{g(x)}=L\cdot{M}$.\\
+
+\noindent
+\textbf{Question}
+
+\noindent
+Suppose that $\displaystyle{\lim_{x\to a}}f(x)$
+exists, and that
+$\displaystyle{\lim_{x\to a}}f(x)=L$. Suppose $M$ is any 
+number.
+Then prove that $\displaystyle{\lim_{x\to a}}(Mf(x))$
+exists, and $\displaystyle{\lim_{x\to a}}(Mf(x))=M\displaystyle{\lim_{x\to a}}f(x)$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+$\forall x $ such that $0<|x-a|<\delta, |f(x)-L|< \epsilon$. From the theorem that $|a|\cdot{|b|}=|ab|$. Thus, $|M|\cdot{|f(x)-L|}=|M(f(x)-L)|$. Then, we know that 
+\[M\cdot{|f(x)-L|}=|M(f(x)-L)|<|M|\cdot{\epsilon}\]
+\[|M\cdot{f(x)}-LM|<|M\cdot{\epsilon}|=\epsilon_{final}\]
+Let $\epsilon=\frac{\epsilon_{final}}{|M|}$, then we could have $|M\cdot{f(x)}-LM|$ be a small number and therefore, $\lim_{x\to a}(M\cdot{f(x)})=L\cdot{M}$. Also, because $\lim_{x\to a}f(x)$ is a number, then we know that $M\cdot{\lim_{x\to a}f(x)}=M\cdot{L}$. Therefore, $M\cdot{\lim_{x\to a}f(x)}=\lim_{x\to a}(M\cdot{f(x)})$.\\
+
+\noindent
+\textbf{Question}
+
+\noindent
+Show that a function cannot
+have two different limits at $a$. That is, 
+if $\displaystyle{\lim_{x\to a}}f(x)$ exists, and 
+$\displaystyle{\lim_{x\to a}}f(x)=L$ , and
+$\displaystyle{\lim_{x\to a}}f(x)=M$, then we
+must have $L=M$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+$\forall x $ such that $0<|x-a|<\delta, |f(x)-L|< \epsilon_1$ and $|f(x)-M|< \epsilon_2$. 
 
 \end{document}
