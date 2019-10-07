@@ -103,7 +103,7 @@ Thus, we would have a new inequality:
 From there, we could say that $|f(x)\cdot{g(x)}-LM|<|\epsilon_1\epsilon_2|+|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq \epsilon$
 
 \noindent
-Assume $\epsilon_1\epsilon_2\leq \epsilon/2$. From there we know, $\epsilon_1, \epsilon_2 \leq \sqrt{\frac{\epsilon}{2}}$. On the other hand from $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq \epsilon/2$. We know that $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq |M\cdot{\epsilon_1}|+|L\cdot{\epsilon_2}|$. In order for the previous inequality to hold, we assign $|M\cdot{\epsilon_1}|<\epsilon/4$ and $|L\cdot{\epsilon_2}|<\epsilon/4$. Therefore, $\epsilon_2<\frac{\epsilon}{4\cdot{|M|}}$ and $\epsilon_1<\frac{\epsilon}{4\cdot{|L|}}$. If we have $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|L|}}, \sqrt{\frac{\epsilon}{2}})$ and $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|M|}}, \sqrt{\frac{\epsilon}{2}})$. Then, we have $\epsilon$ to be a very small number. We then have $\lim_{x\to a} f(x)\cdot{g(x)}=L\cdot{M}$.\\
+Assume $\epsilon_1\epsilon_2\leq \frac{\epsilon}{2}$. From there we know, $\epsilon_1, \epsilon_2 \leq \sqrt{\frac{\epsilon}{2}}$. On the other hand, from $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq \frac{\epsilon}{2}$. We know that $|M\cdot{\epsilon_1}+L\cdot{\epsilon_2}|\leq |M\cdot{\epsilon_1}|+|L\cdot{\epsilon_2}|$. In order for the previous inequality to hold, we assign $|M\cdot{\epsilon_1}|<\epsilon/4$ and $|L\cdot{\epsilon_2}|<\epsilon/4$. Therefore, $\epsilon_2<\frac{\epsilon}{4\cdot{|M|}}$ and $\epsilon_1<\frac{\epsilon}{4\cdot{|L|}}$, where $L,M\neq 0$. If we have $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|L|}}, \sqrt{\frac{\epsilon}{2}})$ and $\epsilon_1<\text{Min}(\frac{\epsilon}{4\cdot{|M|}}, \sqrt{\frac{\epsilon}{2}})$. Also, if we have $L$ or $M$ equal to 0. We can just say $\epsilon_1 < \sqrt{\frac{\epsilon}{2}}$ and $\epsilon_2 < \sqrt{\frac{\epsilon}{2}}$. Then, we have $\epsilon$ to be a very small number. We then have $\lim_{x\to a} f(x)\cdot{g(x)}=L\cdot{M}$.\\
 
 \noindent
 \textbf{Question}
@@ -120,10 +120,13 @@ exists, and $\displaystyle{\lim_{x\to a}}(Mf(x))=M\displaystyle{\lim_{x\to a}}f(
 \textbf{Proof: }
 
 \noindent
-$\forall x $ such that $0<|x-a|<\delta, |f(x)-L|< \epsilon$. From the theorem that $|a|\cdot{|b|}=|ab|$. Thus, $|M|\cdot{|f(x)-L|}=|M(f(x)-L)|$. Then, we know that 
+Suppose $\epsilon_1=\frac{\epsilon}{|M|}$ where $|M|\neq 0$ and $\forall x $ such that $0<|x-a|<\delta, |f(x)-L|< \epsilon$. From the theorem that $|a|\cdot{|b|}=|ab|$. Thus, $|M|\cdot{|f(x)-L|}=|M(f(x)-L)|$. Then, we know that 
 \[M\cdot{|f(x)-L|}=|M(f(x)-L)|<|M|\cdot{\epsilon}\]
-\[|M\cdot{f(x)}-LM|<|M\cdot{\epsilon}|=\epsilon_{final}\]
-Let $\epsilon=\frac{\epsilon_{final}}{|M|}$, then we could have $|M\cdot{f(x)}-LM|$ be a small number and therefore, $\lim_{x\to a}(M\cdot{f(x)})=L\cdot{M}$. Also, because $\lim_{x\to a}f(x)$ is a number, then we know that $M\cdot{\lim_{x\to a}f(x)}=M\cdot{L}$. Therefore, $M\cdot{\lim_{x\to a}f(x)}=\lim_{x\to a}(M\cdot{f(x)})$.\\
+\[|M\cdot{f(x)}-LM|<|M\cdot{\epsilon}|=\epsilon\]
+Then we could have $|M\cdot{f(x)}-LM|$ be a small number and therefore, $\lim_{x\to a}(M\cdot{f(x)})=L\cdot{M}$. Also, because $\lim_{x\to a}f(x)$ is a number, then we know that $M\cdot{\lim_{x\to a}f(x)}=M\cdot{L}$. Therefore, $M\cdot{\lim_{x\to a}f(x)}=\lim_{x\to a}(M\cdot{f(x)})$.
+
+\noindent
+If we have $M=0$, then we know that on the left hand side, we are finding the limit of 0, which is 0. And on the right hand side, we have $0\cdot{L}=0$. Therefore, the theorem still holds.\\
 
 \noindent
 \textbf{Question}
@@ -140,9 +143,15 @@ must have $L=M$.
 \textbf{Proof: }
 
 \noindent
-$\forall x $ such that $0<|x-a|<\delta, |f(x)-L|< \epsilon_1$ and $|f(x)-M|< \epsilon_2$ where $L\neq M$. Therefore, $\epsilon_1 \neq \epsilon_2$. If we have $\epsilon_1<\epsilon_2$, then we know that from the definition of a limit $|f(x)-L|<|f(x)-M|$. It is because $|f(x)-L|$ is smaller, then $f(x)$ is closer to L instead of M. Thus, $\displaystyle{\lim_{x\to a}}f(x)=L$. Vice versa, if we have $\epsilon_1 > \epsilon_2$, then $|f(x)-L|>|f(x)-M|$ and $\displaystyle{\lim_{x\to a}}f(x)=M$. In conclusion if  $\displaystyle{\lim_{x\to a}}f(x)$ exists, and 
+Suppose we have $ L < M$ and we assign $0<\epsilon\leq \frac{M-L}{2}$ such that $2\epsilon\leq M-L$ and $L+\epsilon\leq M-\epsilon$ therefore, $(M-\epsilon,M+\epsilon)\cap (L-\epsilon,L+\epsilon)=\emptyset$. Also, $\forall x $ such that $0<|x-a|<\delta, |f(x)-L|< \epsilon$ and $|f(x)-M|< \epsilon$. From that we have $L-\epsilon<f(x)<L+\epsilon$ and $M-\epsilon<f(x)<M+\epsilon$. Then, we know that we need to have two different $f(x)$ in order to have $f(x)$ to be in two different ranges. This means $f(x)$ is not a one-to-one relationship, thus not a function. Therefore, for $f(x)$ there should be only one possible function. Then, if  $\displaystyle{\lim_{x\to a}}f(x)$ exists, and 
 $\displaystyle{\lim_{x\to a}}f(x)=L$ , and
 $\displaystyle{\lim_{x\to a}}f(x)=M$, then we
 must have $L=M$.
+
+\pagebreak
+\noindent
+\textbf{Chapter 5. \#8}
+
+\noindent
 
 \end{document}
