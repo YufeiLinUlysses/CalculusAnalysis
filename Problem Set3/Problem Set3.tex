@@ -153,5 +153,24 @@ must have $L=M$.
 \textbf{Chapter 5. \#8}
 
 \noindent
+\textbf{(i) Counter Example}
+
+\noindent
+For instance, if we let \(f(x)=\frac{1}{x^2}\) and \(g(x)=-\frac{1}{x^2}\), then we have $f(x)+g(x)=\frac{1}{x^2}+(-\frac{1}{x^2})=0$. And if $x\rightarrow 0$, then both $\displaystyle{\lim_{x\to 0}}f(x)$ and $\displaystyle{\lim_{x\to 0}}g(x)=L$ do not exist, but $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}0=0$ which do exist. Therefore, a counter example. 
+
+\noindent
+If we were to generalize this situation, for any polynomial $f(x)$ that does not contain a constant, let $g(x)=\frac{1}{f(x)}$ and $h(x)=-\frac{1}{f(x)}$. As $x\to 0$,$\displaystyle{\lim_{x\to 0}}f(x)$ and $\displaystyle{\lim_{x\to 0}}g(x)=L$ do not exist, but $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}0=0$ which do exist.
+
+\noindent
+\textbf{(ii) Proof}
+
+\noindent
+Assume, $\displaystyle{\lim_{x\to 0}}g(x)$ does not exist. From the thorem I, we have proved that $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}f(x)+\displaystyle{\lim_{x\to 0}}g(x)$. It is because $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))$ exist, and $\displaystyle{\lim_{x\to 0}}f(x)$ exist. By definition of a real number such that the differece between any two real number is a real number. Thus, $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))-\displaystyle{\lim_{x\to 0}}f(x)$ exist, which contradicts with our assumption. Therefore, $\displaystyle{\lim_{x\to 0}}g(x)$ does not exist.
+
+\noindent
+\textbf{(iv) Counter Example}
+
+\noindent
+Let $f(x)=x$ and $g(x)=\sqrt{x}$, such that for $x\to -1$, $f(x)$ has a limit and $g(x)$ does not exist. However, for $f(x)\cdot{g(x)}=x\cdot{\sqrt{x}}=1$, $\displaystyle{\lim_{x\to -1}}(f(x)\cdot{g(x)})=\displaystyle{\lim_{x\to -1}}1=1$, which means the limit of $f(x)g(x)$ exist.
 
 \end{document}
