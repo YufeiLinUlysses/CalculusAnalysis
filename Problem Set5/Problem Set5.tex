@@ -60,5 +60,93 @@ Oct \(24^{th}\) 2019
 \textbf{(a) Proof}
 
 \noindent
+Suppose $\forall x, |f(x)|\leq |x|$. Thus, $0\leq |f(x)|\leq |x|$. When, $x=0$, $0\leq |f(0)|\leq |0|$. Thus, $f(0)=0$. Suppose $\exists \delta>0$ such that, $\forall x$, $|x-0|<\delta$. Then we have $|x|<\delta$. It's also because $|f(x)|\leq |x|$. Thus, $|f(x)|\leq |x|<\delta$. $|f(x)|=|f(x)-0|=|f(x)-f(0)|$. Therefore, $|f(x)-f(0)|\delta$. Thus $\displaystyle{\lim_{x\to 0}}f(x)=0$.
 
+\noindent
+\textbf{(b) Example}
+
+\[  f(x)= \left\{
+\begin{array}{ll}
+      0 & x\in \mathbb{R}-\mathbb{Q} \\
+      x & x\in \mathbb{Q} \\
+\end{array} 
+\right. \]
+
+\noindent
+\textbf{(c) Proof}
+
+\noindent
+Suppose $\displaystyle{\lim_{x\to 0}}g(x)=0$. Therefore, for any $\epsilon>0$, $\exists \delta >0$ such that if $|x-0|<\delta$, then $|g(x)-g(0)|<\epsilon$. Also, we know that $g(0)=0$, then if $|x|<\delta$, then $|g(x)|<\epsilon$. Since $0\leq |f(x)|\leq|g(x)|$, then $0\leq |f(0)|\leq|g(0)|=0$. Thus, $f(0)=0$. Then, since $|f(x)-f(0)|=|f(x)|\leq |g(x)|=|g(x)-0|<\epsilon$, we know that $|f(x)-f(0)|<\epsilon$. Thus, $\displaystyle{\lim_{x\to 0}}f(x)=0$.\\
+
+\noindent
+\textbf{Chapter 6 \#4}
+
+\noindent
+Since we want $f(x)$ to be discontinuous, and $|f(x)|$ to be continuous, then we need to have this function with cases that is about irrational and rational and their value should be the contrary number. For instance: 
+\[  f(x)= \left\{
+\begin{array}{ll}
+      1 & x\in \mathbb{R}-\mathbb{Q} \\
+      -1 & x\in \mathbb{Q} \\
+\end{array} 
+\right. \]
+
+\noindent
+\textbf{Chapter 6 \#5}
+
+\noindent
+From the previous question in \#3 (b), we know that if we want to have $0$ to be the continuous point then we should have $0$ for one case and $x$ for the other case. Similarly, because we want to have it continuous at $a$ and discontinuous everywhere else, we can just simply replace $0$ with $a$. 
+
+\[  f(x)= \left\{
+\begin{array}{ll}
+      a & x\in \mathbb{R}-\mathbb{Q} \\
+      x & x\in \mathbb{Q} \\
+\end{array} 
+\right. \]
+
+\noindent
+\textbf{Chapter 6 \#6}
+
+\noindent
+\textbf{(a) Example}
+
+\[  f(x)= \left\{
+\begin{array}{ll}
+      0 & x =\frac{1}{n} n\in \mathbb{N}\\
+      x & x \neq \frac{1}{n} n \in \mathbb{N} \\
+\end{array} 
+\right. \]
+
+\noindent
+\textbf{(b) Example}
+
+\[  f(x)= \left\{
+\begin{array}{ll}
+      1 & x =0\\
+      0 & x =\frac{1}{n} n\in \mathbb{N}\\
+      x & x \neq \frac{1}{n} n \in \mathbb{N} \text{ and } x\neq 0\\
+\end{array} 
+\right. \]
+
+\noindent
+\textbf{Chapter 6 \#12}
+
+\noindent
+\textbf{(a) Proof}
+
+\noindent
+Suppose $f(a)$ exists and $\displaystyle{\lim_{x\to a}}f(x)$ exist and $\displaystyle{\lim_{x\to a}}f(x)=f(a)$. 
+
+\noindent
+\textbf{(b) Example}
+
+\noindent
+Suppose 
+\[  f(x)= \left\{
+\begin{array}{ll}
+      1 & x =0\\
+      0 & x \neq 0\\
+\end{array} 
+\right. \]
+such that $f(x)$ is not continuous at $0$, but we could have $\displaystyle{\lim_{x\to 0}}f(x)=0$. Then, assume $g(x) = x$ such that $\displaystyle{\lim_{x\to 0}}g(x)=0$. Therefore, $\displaystyle{\lim_{x\to 0}}f(g(x))=\displaystyle{\lim_{x\to 0}}f(0)=0$ and $f(\displaystyle{\lim_{x\to 0}}g(x))=f(0)=1$.
+Thus, $\displaystyle{\lim_{x\to a}}f(g(x))\neq f(\displaystyle{\lim_{x\to a}}g(x))$.
 \end{document}

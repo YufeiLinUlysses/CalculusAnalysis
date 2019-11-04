@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.2.7)  24 OCT 2019 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.2.7)  28 OCT 2019 13:25
 entering extended mode
 **"./Problem Set5.tex"
 ("Problem Set5.tex"
@@ -664,30 +664,42 @@ LaTeX Font Info:    Try loading font information for U+esvect on input line 50.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\esvect\uesvect.fd"
 File: uesvect.fd 
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
-{C:/Users/huawe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
- ("Problem Set5.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 64.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
+ []
+
+[1
+
+{C:/Users/huawe/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+
+("Problem Set5.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
  ) 
 Here is how much of TeX's memory you used:
- 17330 strings out of 493312
- 321586 string characters out of 3138900
- 383922 words of memory out of 3000000
+ 17331 strings out of 493312
+ 321592 string characters out of 3138900
+ 387922 words of memory out of 3000000
  20576 multiletter control sequences out of 15000+200000
  9165 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,48p,420b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,48p,491b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on "Problem Set5.pdf" (1 page, 32795 bytes).
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on "Problem Set5.pdf" (2 pages, 91361 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
+ 54 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
