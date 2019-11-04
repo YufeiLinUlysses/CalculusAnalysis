@@ -73,19 +73,28 @@ Suppose $f(x)$ is differentiable at $a$. Then, $f'(a)=\displaystyle{\lim_{h\to 0
 \end{align*}
 
 \noindent
-Then we know $\displaystyle{\lim_{h\to 0}f(a+h)}=\displaystyle{\lim_{h\to 0}f(a)}$. Thus, $\displaystyle{\lim_{x\to a}f(x)=f(a))}$.
+Then we know $\displaystyle{\lim_{h\to 0}f(a+h)}=\displaystyle{\lim_{h\to 0}f(a)}$. Thus, $\displaystyle{\lim_{x\to a}f(x)=f(a))}$.\\
 
 \noindent
 \textbf{Question 2}
 
 \noindent
-Prove if $f(x)=c$, then $\forall a: f'(a) = 0$.
+Prove if $\forall x, f(x)=c, c\in \mathbb{R}$, then $\forall a: f'(a) = 0$.
 
 \noindent
 \textbf{Proof: }
 
 \noindent
-Suppose $f(x)$ exist, then 
+Suppose $a$ is any number, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$.
+\begin{align*}
+\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}
+ & = \displaystyle{\lim_{h\to 0}\frac{c-c}{h}}\\
+ & = \displaystyle{\lim_{h\to 0}0}\\
+ & = 0
+\end{align*}
+
+\noindent
+Therefore, $f'(a) = 0$.\\
 
 \noindent
 \textbf{Question 3}
@@ -94,15 +103,64 @@ Suppose $f(x)$ exist, then
 Prove if $f(x)=x$, then $\forall a: f'(a) = 1$.
 
 \noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $a$ is any number, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$.
+\begin{align*}
+\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}
+ & = \displaystyle{\lim_{h\to 0}\frac{a+h-a}{h}}\\
+ & = \displaystyle{\lim_{h\to 0}\frac{h}{h}}\\
+ & = \displaystyle{\lim_{h\to 0}1}\\
+ & = 1
+\end{align*}
+
+\noindent
+Therefore, $f'(a) = 0$.\\
+
+\noindent
 \textbf{Question 4}
 
 \noindent
 Prove that if $f(x)$ and $g(x)$ are differentiable at $a$, then $f(x)+g(x)$ is differentiable at $a$ and $(f+g)'(a) = f'(a)+g'(a)$. 
 
 \noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $f(x)$ and $g(x)$ are differentiable at $a$, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$ and $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. Thus, 
+\begin{align*}
+f'(a) +g'(a) &= \displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h} + \displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}\\
+&= \displaystyle{\lim_{h\to 0}}(\frac{f(a+h)-f(a)}{h} +\frac{g(a+h)-g(a)}{h})\\
+&= \displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a) + g(a+h)-g(a)}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{(f(a+h)+ g(a+h))-(f(a)+g(a))}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{(f+g)(a+h)-(f+g)(a)}{h}\\
+&= (f+g)'(a)
+\end{align*}
+
+\noindent
+Thus, $(f+g)'(a)=f'(a)+g'(a)$.\\
+
+\noindent
 \textbf{Question 5}
 
 \noindent
 Prove that if $f(x)$ and $g(x)$ are differentiable at $a$, then $f(x)\cdot{g(x)}$ is differentiable at $a$ and $(f\cdot{g})'(a) = f'(a)\cdot{g(a)}+f(a)\cdot{g'(a)}$. 
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+Suppose $f(x)$ and $g(x)$ are differentiable at $a$, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$ and $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. Also, we know both $f(a)$ and $g(a)$ exist. 
+Thus, 
+\begin{align*}
+(f\cdot{g})(a) &= \displaystyle{\lim_{h\to 0}}\frac{(f\cdot{g})(a+h)-(f\cdot{g})(a)}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{(f(a+h)g(a+h)-f(a)g(a)}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{(f(a+h)g(a+h)-f(a)g(a+h)+f(a)g(a+h)-f(a)g(a)}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{((f(a+h)-f(a))g(a+h)+f(a)(g(a+h)-g(a))}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{((f(a+h)-f(a))g(a+h)}{h}+\displaystyle{\lim_{h\to 0}}\frac{f(a)(g(a+h)-g(a))}{h}\\
+&= \displaystyle{\lim_{h\to 0}}\frac{((f(a+h)-f(a))}{h}\cdot{\displaystyle{\lim_{h\to 0}}g(a+h)}+\displaystyle{\lim_{h\to 0}}\frac{(g(a+h)-g(a))}{h}\cdot{\displaystyle{\lim_{h\to 0}}f(a)}\\
+&= f'(a)\cdot{\displaystyle{\lim_{h\to 0}}g(a+h)}+g'(a)\cdot{\displaystyle{\lim_{h\to 0}}f(a)}
+\end{align*}
 
 \end{document}
