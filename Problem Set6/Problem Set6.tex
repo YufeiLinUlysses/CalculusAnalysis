@@ -1,0 +1,117 @@
+ \documentclass[a4paper,12pt]{report}
+
+%Packages Used
+\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+\usepackage{setspace}
+\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{graphics,graphicx}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{esvect}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+
+\bookmarksetup{
+  numbered,
+  open
+}
+\renewcommand*{\thesection}{\arabic{section}}
+\onehalfspacing
+
+%Margins
+\addtolength{\textwidth}{1.0in}
+\addtolength{\textheight}{1.00in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\topmargin}{-.50in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Theorem/Proof Environments %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\noindent{\bf Proof:}}{$\hfill \Box$ \vspace{10pt}}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\titlespacing*{\section}{0.5pt}{0.25\baselineskip}{0.25\baselineskip}
+
+\begin{document}
+\noindent
+Yufei Lin
+
+\noindent
+Problem Set 6
+
+\noindent
+Nov \(4^{th}\) 2019
+
+\begin{center}
+\textbf{Problem Set 6}
+\end{center}
+
+\noindent
+\textbf{Question 1}
+
+\noindent
+Prove that if $f(x)$ is differentiable at $a$, then it is continuous at $a$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $f(x)$ is differentiable at $a$. Then, $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h} = L$ and $f(a)$ exist. Since $h$ is constant $\displaystyle{\lim_{h\to 0}h}$ exist. Then,
+\begin{align*}
+\displaystyle{\lim_{h\to 0}h}\cdot{\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}}
+ & = \displaystyle{\lim_{h\to 0}h}\cdot{L}\\
+ & = 0\cdot{L}\\
+ & = 0\\
+ &=\displaystyle{\lim_{h\to 0}(f(a+h)-f(a))}
+\end{align*}
+
+\noindent
+Then we know $\displaystyle{\lim_{h\to 0}f(a+h)}=\displaystyle{\lim_{h\to 0}f(a)}$. Thus, $\displaystyle{\lim_{x\to a}f(x)=f(a))}$.\\
+
+\noindent
+\textbf{Question 2}
+
+\noindent
+Prove if $\forall x, f(x)=c, c\in \mathbb{R}$, then $\forall a: f'(a) = 0$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $a$ is any number, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$.
+\begin{align*}
+\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}
+ & = \displaystyle{\lim_{h\to 0}\frac{c-c}{h}}\\
+ & = \displaystyle{\lim_{h\to 0}0}\\
+ & = 0
+\end{align*}
+
+\noindent
+Therefore, $f'(a) = 0$.\\
+
+\noindent
+\textbf{Question 3}
+
+\noindent
+Prove if $f(x)=x$, then $\forall a: f'(a) = 1$.
+
+\noindent
+\textbf{Question 4}
+
+\noindent
+Prove that if $f(x)$ and $g(x)$ are differentiable at $a$, then $f(x)+g(x)$ is differentiable at $a$ and $(f+g)'(a) = f'(a)+g'(a)$. 
+
+\noindent
+\textbf{Question 5}
+
+\noindent
+Prove that if $f(x)$ and $g(x)$ are differentiable at $a$, then $f(x)\cdot{g(x)}$ is differentiable at $a$ and $(f\cdot{g})'(a) = f'(a)\cdot{g(a)}+f(a)\cdot{g'(a)}$. 
+
+\end{document}
