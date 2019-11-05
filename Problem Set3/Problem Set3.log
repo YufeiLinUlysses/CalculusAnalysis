@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.2.2)  22 OCT 2019 08:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.2.2)  4 NOV 2019 22:31
 entering extended mode
 **"./Problem Set3.tex"
 ("Problem Set3.tex"
@@ -670,17 +670,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
-[2] [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+
+ []
+
+[5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  ("Problem Set3.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 182.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 17175 strings out of 493312
- 318842 string characters out of 3138900
+ 17176 strings out of 493312
+ 318848 string characters out of 3138900
  384377 words of memory out of 3000000
  20418 multiletter control sequences out of 15000+200000
  9165 words of font info for 39 fonts, out of 3000000 for 9000
@@ -695,9 +725,9 @@ nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 sfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Problem Set3.pdf" (4 pages, 116592 bytes).
+Output written on "Problem Set3.pdf" (5 pages, 121804 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
+ 75 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
