@@ -57,7 +57,36 @@ Oct \(24^{th}\) 2019
 \textbf{Chapter 5 \#12}
 
 \noindent
+\textbf{(a) Proof }
 
+\noindent
+Suppose $\forall x, f(x)\leq g(x)$, and both $\displaystyle{\lim_{x\to a}}f(x) = L$ and $\displaystyle{\lim_{x\to a}}g(x) = M$. Then we know, $\displaystyle{\lim_{x\to a}}g(x)-\displaystyle{\lim_{x\to a}}f(x)=\displaystyle{\lim_{x\to a}}(g(x)-f(x)) = M-L$. Since $(g(x)-f(x))\geq 0$, then $\displaystyle{\lim_{x\to a}}(g(x)-f(x))$ is a limit of a positive number or 0. Thus,  $\displaystyle{\lim_{x\to a}}g(x)-\displaystyle{\lim_{x\to a}}f(x)=\displaystyle{\lim_{x\to a}}(g(x)-f(x))\geq 0$. Therefore, $\displaystyle{\lim_{x\to a}}g(x)\geq \displaystyle{\lim_{x\to a}}f(x)$.\\
+
+\noindent
+\textbf{(b) Answer }
+
+\noindent
+If $\exists d >0$ such that $\forall x, |x-a|<d$, $f(x)\leq g(x)$ and both limit exists at $a$, then $\displaystyle{\lim_{x\to a}}f(x)\leq \displaystyle{\lim_{x\to a}}g(x)$.\\
+
+\noindent
+\textbf{(c) Counter Example}
+
+\[  f(x)= \left\{
+\begin{array}{ll}
+      |x| & x\neq 0 \\
+      1 & x = 0 \\
+\end{array} 
+\right. \]
+
+\[  g(x)= \left\{
+\begin{array}{ll}
+      -|x| & x\neq 0 \\
+      -1 & x = 0 \\
+\end{array} 
+\right. \]
+
+\noindent
+Thus, $f(x)<g(x)$ and $\displaystyle{\lim_{x\to a}}g(x) = \displaystyle{\lim_{x\to a}}f(x) = 0$.\\
 
 \noindent
 \textbf{Chapter 5 \#13}

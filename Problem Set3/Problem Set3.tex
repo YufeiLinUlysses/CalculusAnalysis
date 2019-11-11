@@ -159,52 +159,71 @@ must have $L=M$.
 For instance, if we let \(f(x)=\frac{1}{x^2}\) and \(g(x)=-\frac{1}{x^2}\), then we have $f(x)+g(x)=\frac{1}{x^2}+(-\frac{1}{x^2})=0$. And if $x\rightarrow 0$, then both $\displaystyle{\lim_{x\to 0}}f(x)$ and $\displaystyle{\lim_{x\to 0}}g(x)=L$ do not exist, but $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}0=0$ which do exist. Therefore, a counter example. 
 
 \noindent
-If we were to generalize this situation, for any polynomial $f(x)$ that does not contain a constant, let $g(x)=\frac{1}{f(x)}$ and $h(x)=-\frac{1}{f(x)}$. As $x\to 0$,$\displaystyle{\lim_{x\to 0}}f(x)$ and $\displaystyle{\lim_{x\to 0}}g(x)=L$ do not exist, but $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}0=0$ which do exist.
-
-\noindent
-Suppose both $\displaystyle{\lim_{x\to 0}}(f(x))$ and $\displaystyle{\lim_{x\to 0}}(g(x))$ does not exist. Then we have:
-\[  f(x)= \left\{
-\begin{array}{ll}
-      0 & x< 0 \\
-      1 & x\geq 0 \\
-\end{array} 
-\right. \]
-
-\[  g(x)= \left\{
-\begin{array}{ll}
-      1 & x< 0 \\
-      0 & x\geq 0 \\
-\end{array} 
-\right. \]
-
-\noindent
-Then, we have $f(x)\cdot{g(x)}=0$, which we would have an existing limit for $f(x)g(x)$ while both $\displaystyle{\lim_{x\to 0}}(f(x))$ and $\displaystyle{\lim_{x\to 0}}(g(x))$ does not exist.
+If we were to generalize this situation, for any polynomial $f(x)$ that does not contain a constant, let $g(x)=\frac{1}{f(x)}$ and $h(x)=-\frac{1}{f(x)}$. As $x\to 0$,$\displaystyle{\lim_{x\to 0}}f(x)$ and $\displaystyle{\lim_{x\to 0}}g(x)=L$ do not exist, but $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}0=0$ which do exist.\\
 
 \noindent
 \textbf{(ii) Proof}
 
 \noindent
-Let $h(x)=f(x)+g(x)$, then suppose $\displaystyle{\lim_{x\to 0}}(h(x))=M$ exist. From the theorem that the limit of a constant multiply a scalar is the same as the limit of the function multiplied by a constant. Therefore, $-\displaystyle{\lim_{x\to 0}}(f(x))=\displaystyle{\lim_{x\to 0}}(-f(x))=-L$. By the theorem that for any two functions if the limit for both of the function exist then $\displaystyle{\lim_{x\to 0}}(h(x)+f(x))=M+(-L)=\displaystyle{\lim_{x\to 0}}(g(x))$. Then we know that the limit for g(x) exist. 
+Assume, $\displaystyle{\lim_{x\to 0}}g(x)$ does not exist. From the theorem I, we have proved that $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))=\displaystyle{\lim_{x\to 0}}f(x)+\displaystyle{\lim_{x\to 0}}g(x)$. It is because $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))$ exist, and $\displaystyle{\lim_{x\to 0}}f(x)$ exist. By definition of a real number such that the difference between any two real number is a real number. Thus, $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))-\displaystyle{\lim_{x\to 0}}f(x)$ exist, which contradicts with our assumption. Therefore, $\displaystyle{\lim_{x\to 0}}g(x)$ does not exist.\\
 
 \noindent
 \textbf{(iii) Proof}
 
 \noindent
-Let $\displaystyle{\lim_{x\to 0}}g(x)$ does not exist, and we have $\displaystyle{\lim_{x\to 0}}f(x)=L$. We have $\displaystyle{\lim_{x\to 0}}(f(x)+g(x)) = \displaystyle{\lim_{x\to 0}}g(x) + \displaystyle{\lim_{x\to 0}}f(x)=Undefinied + L$. It is because when we add an undefined number to a real number, it is not defined. Thus $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))$ does not exist.
+Suppose $\displaystyle{\lim_{x\to 0}}(f(x)+g(x)) = M$ exist and $\displaystyle{\lim_{x\to 0}}f(x) = L$, and $\displaystyle{\lim_{x\to 0}}g(x)$ does not exist. Then, $\displaystyle{\lim_{x\to 0}}-f(x) = -L$. We also know that $\displaystyle{\lim_{x\to 0}}(f(x)+g(x))-f(x) = \displaystyle{\lim_{x\to 0}}g(x) = M-L$. Thus, $\displaystyle{\lim_{x\to 0}}g(x)$ exist. Then we have a contradiction. Thus, $\displaystyle{\lim_{x\to 0}}(f(x)+g(x)) = M$ does not exist.\\
 
 \noindent
 \textbf{(iv) Counter Example}
 
 \noindent
-Suppose $f(x)=0$ and $g(x)=\frac{1}{x}$. Then, we know that when $x$ approaches $0$. $\displaystyle{\lim_{x\to 0}}(f(x))=0$, $\displaystyle{\lim_{x\to 0}}(g(x))$ does not exist and $\displaystyle{\lim_{x\to 0}}(f(x)g(x))=0$.\\
+Let $f(x)=x$ and $g(x)=\sqrt{x}$, such that for $x\to -1$, $f(x)$ has a limit and $g(x)$ does not exist. However, for $f(x)\cdot{g(x)}=x\cdot{\sqrt{x}}=1$, $\displaystyle{\lim_{x\to -1}}(f(x)\cdot{g(x)})=\displaystyle{\lim_{x\to -1}}1=1$, which means the limit of $f(x)g(x)$ exist.\\
 
 \noindent
 \textbf{Chapter 5. \#9}
 
 \noindent
-Suppose $\displaystyle{\lim_{x\to 0}}(f(x))=L$, and let $g(h)=f(a+h)$. Let $\epsilon>0$. $\exists \delta >0$such that $\forall x$ if $0<|x-a|<\delta$, then $|f(x)-L|<\epsilon$. 
+\textbf{Chapter 5. \#10}
 
 \noindent
-Let $h\in \mathbb{R}$. Suppose $0<|h-0|<\delta$. Let $x=a+h$. We know that $\forall x$ if $0<|x-a|<\delta$, then $|f(x)-L|<\epsilon$. So this would be true for $x=a+h$. So we know, if $0<|(a+h)-a|<\delta$ then $|f(a+h)|<\epsilon$. So if $0<|h|<\delta$, then $|g(h)-L|<\epsilon$. And because we assumed $0<|h|<\delta$. Then we know $|g(h)-L|<\epsilon$ such that $|f(a+h)-L|<\epsilon$. $\displaystyle{\lim_{x\to a}}(f(x))=\displaystyle{\lim_{h\to 0}}(f(a+h))=L$.
+\textbf{(a) Proof}
 
+\noindent
+Suppose $\displaystyle{\lim_{x\to a}}f(x)=l$. Then, $\forall \epsilon >0, \exists \delta >0$. If $|x-a|<\delta$, then $|f(x)-l|<\epsilon$. Suppose $g(x)=f(x)-l$, then we have $\forall x, |x-a|<\delta$, $|g(x)|<\epsilon$. Thus, $|g(x)-0|<\epsilon$. Then we have $\displaystyle{\lim_{x\to a}}g(x)=0$. Thus, $\displaystyle{\lim_{x\to a}}f(x)-l=0$.\\
+
+\noindent
+\textbf{(b) Proof}
+
+\noindent
+Let $g(x)=f(x-a)$. Suppose $\displaystyle{\lim_{x\to 0}}f(x)=L$. Then, $\forall \epsilon_1>0, \exists \delta_1>0$ such that $\forall x_1,$ if $0<|x_1-0|<\delta_1$, then $|f(x)-L|<\epsilon_1$.
+
+\noindent
+Let $x_1 = x-a$, so $\forall \epsilon_1>0, \exists \delta_1>0$ such that $\forall x,$ if $0<|(x-a)-0|<\delta_1$, then $|f(x-a)-L|<\epsilon_1$.
+
+\noindent
+Therefore,$\displaystyle{\lim_{x\to 0}}f(x)=\displaystyle{\lim_{x\to a}}f(x-a)$.\\
+
+\noindent
+\textbf{(c) Proof}
+
+\noindent
+Let $g(x)=f(x^3)$. Suppose $\displaystyle{\lim_{x\to 0}}f(x)=L$. Let $\epsilon >0$ choose $\delta_1>0$ such that $\forall y,$ if $0<|y|<\delta_1$, then $|f(x)-L|<\epsilon$. Let $\delta = \delta_1^\frac{1}{3}>0$. Suppose $0<|x|<\delta$, then$0<|x|<\delta_1^\frac{1}{3}$. So $0<|x^3|=|x|^3<\delta_1$. Let $y=x^3$, we know $|y|<\delta_1$. So $|f(y)-L|<\epsilon$. Then, $|f(x^3)-L|<\epsilon$. As a result, $|g(x)-L|<\epsilon$. 
+
+\noindent
+\textbf{(d) Example}
+\[  f(x)= \left\{
+\begin{array}{ll}
+      0 & x<0 \\
+      x & x\geq 0 \\
+\end{array} 
+\right. \]
+\noindent
+Then, let $g(x) = f(x^2)$.
+\[  g(x)=f(x^2)= \left\{
+\begin{array}{ll}
+      0 & x^2<0 \\
+      1 & x^2\geq 0 \\
+\end{array} 
+\right. \]
+$\displaystyle{\lim_{x\to 0}}g(x)=1$ while $\displaystyle{\lim_{x\to 0}}f(x)$ does not exist.
 \end{document}
