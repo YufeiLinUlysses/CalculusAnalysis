@@ -154,7 +154,7 @@ Prove that if $f(x)$ and $g(x)$ are differentiable at $a$, then $f(x)\cdot{g(x)}
 Suppose $f(x)$ and $g(x)$ are differentiable at $a$, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$ and $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. Also, we know both $f(a)$ and $g(a)$ exist. 
 Thus, 
 \begin{align*}
-(f\cdot{g})(a) &= \displaystyle{\lim_{h\to 0}}\frac{(f\cdot{g})(a+h)-(f\cdot{g})(a)}{h}\\
+(f\cdot{g})'(a) &= \displaystyle{\lim_{h\to 0}}\frac{(f\cdot{g})(a+h)-(f\cdot{g})(a)}{h}\\
 &= \displaystyle{\lim_{h\to 0}}\frac{(f(a+h)g(a+h)-f(a)g(a)}{h}\\
 &= \displaystyle{\lim_{h\to 0}}\frac{(f(a+h)g(a+h)-f(a)g(a+h)+f(a)g(a+h)-f(a)g(a)}{h}\\
 &= \displaystyle{\lim_{h\to 0}}\frac{((f(a+h)-f(a))g(a+h)+f(a)(g(a+h)-g(a))}{h}\\
@@ -163,4 +163,318 @@ Thus,
 &= f'(a)\cdot{\displaystyle{\lim_{h\to 0}}g(a+h)}+g'(a)\cdot{\displaystyle{\lim_{h\to 0}}f(a)}
 \end{align*}
 
+\noindent
+By the theorem from Chapter 5 Question 9, we know that $\displaystyle{\lim_{h\to 0}}g(a+h)=\displaystyle{\lim_{x\to a}}g(x)$. Also, because this function is differentiable at $a$. Thus, this function is continuous at $a$, meaning $\displaystyle{\lim_{x\to a}}g(x)=g(a)$. Therefore, 
+\begin{align*}
+& f'(a)\cdot{\displaystyle{\lim_{h\to 0}}g(a+h)}+g'(a)\cdot{\displaystyle{\lim_{h\to 0}}f(a)}\\
+= &f'(a)\cdot{g(a)}+g'(a)\cdot{f(a)}
+\end{align*}
+
+
+\noindent
+Thus, $(f\cdot{g})'(a) = f'(a)\cdot{g(a)}+g'(a)\cdot{f(a)}$.
+
+\pagebreak
+
+\noindent
+\textbf{Question 6}
+
+\noindent
+Prove that if $f(x):\mathbb{R}\rightarrow \mathbb{R}$ is differentiable at $a\in \mathbb{R}$ and $c\in \mathbb{R}$, then $g(x)=c\cdot{f(x)}$ is differentiable at $a$, and $g'(x) = c\cdot{f'(x)}$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $f(x)$ and $g(x)$ are differentiable at $a$, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$ and $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. Also, we know both $f(a)$ and $g(a)$ exist. 
+Thus, 
+\begin{align*}
+g'(a)&=
+\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{c\cdot{f(a+h)}-c\cdot{f(a)}}{h}\\
+&=c\cdot{\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}}\\
+&=c\cdot{f'(a)}
+\end{align*}
+
+\noindent
+Therefore, $g'(x) = c\cdot{f'(x)}$.\\
+
+\noindent
+\textbf{Question 7}
+
+\noindent
+Prove that if $\forall x\in \mathbb{R}, n\in \mathbb{N}, f(x):\mathbb{R}\rightarrow \mathbb{R}$, $f(x)=x^n$, such that, if $f(x)$ is differentiable at $a\in \mathbb{R}$, then $f'(x)=na^{n-1}$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $n = 1$, then $f(x) = x$ and $f'(x) = 1\cdot{a^{1-1}} = 1$, according to the assumption. Then we have,
+\begin{align*}
+f'(x) &= \displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{a+h-a}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{h}{h}\\
+&=\displaystyle{\lim_{h\to 0}}1\\
+&= 1
+\end{align*}
+
+\noindent
+Thus, we have $f'(x)$ as the assumption. 
+
+\noindent
+Suppose there is a $k, k\in \mathbb{N}$ , such that $h(x)=x^k$ and $h'(k)=ka^{k-1}$.
+
+\noindent
+For $k+1$, $f(x)=x^{k+1}$. Then, we have based on the definition of a derivative: 
+\pagebreak
+\begin{align*}
+f'(x)&=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{(a+h)^{k+1}-a^{k+1}}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{(a+h)^{k}\cdot{(a+h)}-a^{k}\cdot{a}}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{(a+h)^{k}\cdot{a}+(a+h)^{k}\cdot{h}-a^{k}\cdot{a}}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{((a+h)^{k}-a^{k})\cdot{a}+(a+h)^{k}\cdot{h}}{h}\\
+&=\displaystyle{\lim_{h\to 0}}(\frac{((a+h)^{k}-a^{k})\cdot{a}}{h}+\frac{(a+h)^{k}\cdot{h}}{h})\\
+&=\displaystyle{\lim_{h\to 0}}\frac{((a+h)^{k}-a^{k})\cdot{a}}{h}+\displaystyle{\lim_{h\to 0}}\frac{(a+h)^{k}\cdot{h}}{h})\\
+&=a\cdot{\displaystyle{\lim_{h\to 0}}\frac{((a+h)^{k}-a^{k})\cdot{a}}{h}}+\displaystyle{\lim_{h\to 0}}(a+h)^{k}\\
+&=a\cdot{h'(x)}+a^k\\
+&=a\cdot{ka^{k-1}} + a^k\\
+&=(k+1)\cdot{a^k}
+\end{align*}
+
+Therefore, $f'(a)=na^{n-1}$ when $f(a)=a^n$.\\
+
+\noindent
+\textbf{Question 8}
+
+\noindent
+Prove that if $g(x)$ is differentiable at $a\in \mathbb{R}$, and $g(a)\neq 0$, then the function $\frac{1}{g(x)}$ is differentiable at $a$, and $\frac{1}{g(a)}=\frac{-g'(a)}{(g(a))^2}$. 
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $g(x)$ is differentiable at $a$, then $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. Let $f(x)=\frac{1}{g(x)}$, since we only know that $g(a)\neq 0$, but we can find a $\delta$ such that $\delta>|h|$ and $g(a+h)\neq 0$.\\
+
+\noindent
+Then we have, 
+\begin{align*}
+f'(x)&=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{\frac{1}{g(a+h)}-\frac{1}{g'(a)}}{h}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{g(a)-g(a+h)}{h\cdot{g(a)\cdot{g(a+h)}}}\\
+&=\displaystyle{\lim_{h\to 0}}(\frac{g(a)-g(a+h)}{h}\cdot{\frac{1}{g(a)\cdot{g(a+h)}}})\\
+&=\displaystyle{\lim_{h\to 0}}(\frac{g(a)-g(a+h)}{h}\cdot{\displaystyle{\lim_{h\to 0}}\frac{1}{g(a)\cdot{g(a+h)}}}\\
+&=-g'(a)\cdot{\frac{1}{g(a)\cdot{g(a)}}}\\
+&=-\frac{g'(a)}{(g(a))^2}
+\end{align*}
+
+\noindent
+Therefore, $\frac{1}{g(x)}$ exist. \\
+
+\noindent
+\textbf{Question 9}
+
+\noindent
+Prove that if $f(x)$ and $g(x)$ are differentiable at $a$, then $\frac{f}{g}(x)$ is differentiable at $a$ and \[(\frac{f}{g})'(a) = \frac{f'(a)\cdot{g(a)}-f(a)\cdot{g'(a)}}{(g(a))^2}.\]
+
+\noindent
+Suppose $f(x)$ and $g(x)$ are differentiable at $a$, then $f'(a)=\displaystyle{\lim_{h\to 0}}\frac{f(a+h)-f(a)}{h}$ and $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. Then, let $h(x) = \frac{1}{g(x)}$. Therefore, $h'(x)=-\frac{g'(a)}{(g(a))^2}$ 
+
+\noindent
+Thus, we have $\frac{f}{g}(x)=f(x)\cdot{h(x)}$. Then, 
+\begin{align*}
+(\frac{f}{g})'(a)&=(f\cdot{h})'(a)\\
+&= f(a)\cdot{h'(a)}+f'(a)\cdot{h(a)}\\
+&= f(a)\cdot{(-\frac{g'(a)}{(g(a))^2})} + f'(a)\cdot{\frac{1}{g(x)}}\\
+&= \frac{-f(a)g(a)}{(g(a))^2}+\frac{f'(a)}{g(a)}\\
+&=\frac{f'(a)\cdot{g(a)}-f(a)\cdot{g'(a)}}{(g(a))^2}
+\end{align*}
+
+\noindent
+Therefore, the derivative exist. 
+
+\noindent
+\textbf{Question 10}
+
+\noindent
+Prove that if $g(x):\mathbb{R}\rightarrow \mathbb{R}$ is differentiable at $a, a\in \mathbb{R}$, and if $f(x): \mathbb{R}\rightarrow \mathbb{R}$ is differentiable at $g(a)$, then $f\circ g$ is also differentiable at $a$, and $(f\circ g)'(a)=f'(g(a))\cdot{g'(a)}$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $g(x)$ is differentiable at $a$, and $f(x)$ is differentiable at $g(a)$. Then, we have $g'(a)=\displaystyle{\lim_{h\to 0}}\frac{g(a+h)-g(a)}{h}$. 
+Then,
+\begin{align*}
+(f\circ g)(a)&=\displaystyle{\lim_{h\to 0}}\frac{f(g(a+h))-f(g(a))}{h}
+\end{align*}
+Let $l=g(a)$, $m=g(a+h)$, $t=l-m$ and $l=m+t$, where $l-m$ is a very small increment. Thus, we have 
+\begin{align*}
+(f\circ g)(a)&=\displaystyle{\lim_{t\to 0}}\frac{f(m+t)-f(m)}{t}\\
+&=\displaystyle{\lim_{h\to 0}}\frac{f(m+t)-f(m)}{t}\cdot{\frac{t}{h}}\\
+&=\displaystyle{\lim_{t\to 0}}\frac{f(m+t)-f(m)}{t}\cdot{\displaystyle{\lim_{h\to 0}}\frac{t}{h}}
+\end{align*}
+
+\noindent
+\textbf{Chapter 10 Exercise}
+
+\noindent
+\textbf{\#1 Answers}
+
+\begin{enumerate}
+\item[(i)] 
+\begin{sloppypar}
+\[f(x)=sin(x+x^2),\]\[ f'(x)=(2x+1)cos(x+x^2)\]
+\end{sloppypar}
+\item[(ii)] 
+\begin{sloppypar}
+\[f(x)=sinx+sinx^2,\]\[ f'(x)=2x\cdot{cos(x^2)}+cos(x)\]
+\end{sloppypar}
+\item[(iii)] 
+\begin{sloppypar}
+\[f(x)=sin(cosx),\]\[ f'(x)=sinx\cdot{(-cos(cos(x)))}\]
+\end{sloppypar}
+\item[(iv)] 
+\begin{sloppypar}
+\[f(x)=sin(sinx), \]\[f'(x)=cos(x)\cdot{cos(sin(x))}\]
+\end{sloppypar}
+\item[(v)] 
+\begin{sloppypar}
+\[f(x)=sin(\frac{cosx}{x}),\]\[ f'(x)=-\frac{cos(\frac{cos(x)}{x})\cdot{(x\cdot{sin(x)+cos(x)})}}{x^2}\]
+\end{sloppypar}
+\item[(vi)] 
+\begin{sloppypar}
+\[f(x)=\frac{sin(cos(x))}{x}, \]\[f'(x)=-\frac{x\cdot{sin(x)cos(cos(x))+sin(cos(x))}}{x^2}\]
+\end{sloppypar}
+\item[(vii)] 
+\begin{sloppypar}
+\[f(x)=sin(x+sinx),\]\[ f'(x)=(cosx+1)\cdot{cos(x+sin(x))}\]
+\end{sloppypar}
+\item[(viii)] 
+\begin{sloppypar}
+\[f(x)=sin(cos(sinx)),\]\[ f'(x)=sin(sin(x))(-cos(x)cos(cos(sin(x))))\]
+\end{sloppypar}
+\end{enumerate}
+
+\noindent
+\textbf{\#2 Answers}
+\begin{enumerate}
+\item[(i)] 
+\begin{sloppypar}
+\[f(x)=sin((x+1)^2(x+2)),\]\[ f'(x)=(3x^2+8x+5)\cdot{cos((x+1)^2(x+2))}\]
+\end{sloppypar}
+\item[(ii)] 
+\begin{sloppypar}
+\[f(x)=sin^3(x^2+sinx), \]\[f'(x)=3sin^2(x^2+sin(x))\cdot{cos(x^2+sin(x))x}\cdot{(2x+cosx)}\]
+\end{sloppypar} 
+\item[(iii)] 
+\begin{sloppypar}
+\[f(x)=sin^2((x+sinx)^2),\]\[ f'(x)=4(x+sin(x))sin(x+sin(x))^2)(cos(x)+1)cos(x+sin^2(x))\]
+\end{sloppypar} 
+\item[(iv)]
+\begin{sloppypar}
+\[f(x)=sin(\frac{x^3}{cos(x^3)}), \]\[f'(x)=cos(\frac{x^3}{cos(x^3)})\cdot{\frac{cos(x^3)3x^2+x^3sin(x^3)\cdot{3x^2}}{cos^2(x^3)}}\]
+\end{sloppypar} 
+\item[(v)]
+\begin{sloppypar}
+\[f(x)=sin(x\cdot{sin(x)})+sin(sinx^2),\]\[ f'(x)=2sin(x)\cdot{cos(x)}cos(sin^2(x))+cos(x\cdot{sin(x)})(sin(x)+x\cdot{cos(x)})\]
+\end{sloppypar} 
+\item[(vi)] 
+\begin{sloppypar}
+\[f(x)=cos(x)^{31^2},\]\[ f'(x)=31^2(cosx)^{31^2-1}\cdot{(-sin(x))}\]
+\end{sloppypar}
+\item[(vii)] 
+\begin{sloppypar}
+\[f(x)=sin^2(x)sin(x^2)sin^2(x^2),\]
+ \[f'(x)=2sin(x)sin^2(x^2)\cdot{(3x\cdot{sin(x)}cos(x^2)+sin(x^2)cos(x))}\]
+\end{sloppypar}
+\item[(viii)]
+\begin{sloppypar}
+\[f(x)=sin^3(sin^2(sin(x))),\] 
+\[f'(x)=3sin^2(sin^2(sin(x)))\cdot{cos(sin^2(sin(x))
+\cdot{2sin(sin(x))\cdot{cos(sin(x))\cdot{cos(x)}}}}\]
+\end{sloppypar} 
+\item[(ix)] 
+\begin{sloppypar}
+\[f(x)=(x+sin^5(x))^6\] \[f'(x)=6(x+sin^5(x))^5(5sin^4(x)cos(x)+1)\]
+\end{sloppypar}
+\item[(x)] 
+\begin{sloppypar}
+\[f(x)=sin(sin(sin(sin(sin(x))))),\] \[f'(x)=cos(sin(sin(sin(sin(x)))))\cdot{cos(sin(sin(sin(x))))\cdot{cos(sin(sin(x)))\cdot{cos(sin(x))}\cdot{cos(x)}}}\]
+\end{sloppypar}
+\item[(xi)] 
+\begin{sloppypar}
+\[f(x)=sin((sin^7(x^7)+1)^7),\] \[ f'(x)=343x^6\cdot{sin^6(x^7)(sin^7(x^7)+1)^6cos(x^7)cos((sin^7(x^7)+1)^7}\]
+\end{sloppypar}
+\item[(xii)]
+\begin{sloppypar}
+\[f(x)=(((x^2+x)^3+x)^4+x)^5,\]
+\[ f'(x)=5(((x^2+x)^3+x)^4+x^4)\cdot{(1+4((x^2+x)^3+x)^3+x)^3(1+3(x^2+x)^2(1+2x)}\]
+\end{sloppypar} 
+\item[(xiii)] 
+\begin{sloppypar}
+\[f(x)=sin(x^2+sin(x^2+sin(x^2))),\]
+\[ f'(x)=2x((cos(x^2)+1)cos(x^2+sin(x^2))+1)cos(x^2+sin(x^2+sin(x^2)))\]
+\end{sloppypar} 
+\item[(xiv)] 
+\begin{sloppypar}
+\[f(x)=sin(6cos(6sin(6cos(6sin(x))))),\]
+\[ f'(x)=1296cos(6cos(6sin(6cos(6x))))\cdot{sin(6sin(6cos(6x)))\cdot{cos(6cos(6x)))\cdot{(sin(6x)}}}\]
+\end{sloppypar}
+\item[(xv)] 
+\begin{sloppypar}
+\[f(x)=\frac{sin(x^2)sin^2(x)}{1+sin(x)},\]
+\[ f'(x)=\frac{sin(x)(2x(1+sin(x))sin(x)cos(x^2)+(sin(x)+2)sin(x^2)cos(x)}{(1+sin(x))^2}\]
+\end{sloppypar}
+\item[(xvi)] 
+\begin{sloppypar}
+\[f(x)=\frac{1}{x-\frac{2}{x+sinx}},\]
+\[ f'(x)=\frac{-1-\frac{2(1+cos(x)}{(x+sin(x))^2}}{(x-\frac{2}{x+sin(x)})^2}\]
+\end{sloppypar}
+\item[(xvii)] \begin{sloppypar}
+\[f(x)=sin(\frac{x^3}{sin(\frac{x^3}{sin(x)})}),\]
+\[ f'(x)=\frac{x^2}{sin(\frac{x^3}{sin(x)})}\cdot{cos(\frac{x^3}{sin(\frac{x^3}{sin(x)}})}\cdot{(\frac{x^3}{sin(x)}\cdot{(\frac{x\cdot{cos(x)}}{sin(x)}-3)}\cdot{\frac{cos(\frac{x^3}{sin(x)})}{sin(\frac{x^3}{sin(x)})}}+3)}\]
+\end{sloppypar}
+\item[(xviii)] 
+\begin{sloppypar}
+\[f(x)=sin(\frac{x}{x-sin(\frac{x}{x-sin(x)})},\]
+\begin{align*}
+f'(x)&=cos(\frac{x}{x-sin(\frac{x}{x-sin(x)})})\cdot{\frac{1}{(x-sin(\frac{x}{x-sin(x)}))^2}}\\&\cdot{x-sin(\frac{x}{x-sin(x)})-x\cdot{(1-cos(\frac{x}{x-sin(x)})\cdot{\frac{x-sin(x)-x\cdot{(1-cos(x))}}{(x-sin(x))^2}})}}
+\end{align*}
+\end{sloppypar}
+\end{enumerate}
+
+\noindent
+\textbf{\#6 Answers}
+\begin{enumerate}
+\item[(i)]
+\begin{sloppypar}
+\[f(x)=g(x+g(a)),\]
+\[f'(x)=g'(x+g(a))\]
+\end{sloppypar}
+\item[(ii)]
+\begin{sloppypar}
+\[f(x)=g(x\cdot{g(a)}),\]
+\[f'(x)=g'(x\cdot{g(a)})\cdot{g(a)}\]
+\end{sloppypar}
+\item[(iii)]
+\begin{sloppypar}
+\[f(x)=g(x + g(x)),\]
+\[f'(x)=g'(x + g(x))\cdot{(g'(x)+1)}\]
+\end{sloppypar}
+\item[(iv)]
+\begin{sloppypar}
+\[f(x)=g(x)(x - a),\]
+\[f'(x)=g(x)+(x-a)g'(x)\]
+\end{sloppypar}
+\item[(v)]
+\begin{sloppypar}
+\[f(x)=g(a)(x - a),\]
+\[f'(x)=g(a)\]
+\end{sloppypar}
+\item[(vi)]
+\begin{sloppypar}
+\[f(x+3)=g(x^2)\rightarrow f(x)=g((x-3)^2),\]
+\[f'(x)=2g'((x-3)^2)\cdot{(x-3)}\]
+\end{sloppypar}
+\end{enumerate}
 \end{document}
