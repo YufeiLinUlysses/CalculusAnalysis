@@ -1,0 +1,81 @@
+ \documentclass[a4paper,12pt]{report}
+
+%Packages Used
+\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+\usepackage{setspace}
+\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{graphics,graphicx}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{esvect}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\usepackage{url,graphicx,enumitem}
+
+
+%   Article style enumerate
+
+\renewcommand{\labelenumi}{\theenumi.}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\bull}{\ensuremath{\bullet}}
+
+\newcommand{\vc}[1]{\vec{#1}}
+
+\newcommand{\transpose}{\mathsf{T}}
+
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\ud}{\mathrm{d}}
+
+\bookmarksetup{
+  numbered,
+  open
+}
+\renewcommand*{\thesection}{\arabic{section}}
+\onehalfspacing
+
+%Margins
+\addtolength{\textwidth}{1.0in}
+\addtolength{\textheight}{1.00in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\topmargin}{-.50in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Theorem/Proof Environments %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\noindent{\bf Proof:}}{$\hfill \Box$ \vspace{10pt}}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\titlespacing*{\section}{0.5pt}{0.25\baselineskip}{0.25\baselineskip}
+
+
+\begin{document}
+\noindent
+Yufei Lin
+
+\noindent
+Problem Set 8
+
+\noindent
+Nov \(25^{th}\) 2019
+
+\begin{center}
+\textbf{Problem Set 8}
+\end{center}
+
+\noindent
+\textbf{Question 1}
+
+\noindent
+Suppose that $f:[a,b]\rightarrow\mathbb{R}$, is integrable, and suppose that $m=inf\{f(x):x\in [a,b]\}$ and $M=sup\{f(x):x\in [a,b]\}$. Then, we have $m(b-a)\leq \int_{a}^{b}f\leq M(b-a)$.
+\end{document}
