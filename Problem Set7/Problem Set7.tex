@@ -117,7 +117,7 @@ Then prove that there exists a $c\in\R$ such that
 \textbf{Proof: }
 
 \noindent
-Suppose $f'(x)=0$. Then, $f'(x)=\displaystyle{\lim_{h\to 0}}\frac{f(b)-f(a)}{b-a} = 0$. Therefore, $f(b)-f(a)=0$.  Thus, $f(b)=f(a)$. This means $f(x)$ is constant. $f(x)=c$. 
+Suppose $f'(x)=0$. Then by mean value theorem, given $a,b \in \mathbb{R}, a<b$ such that there exists $c, f'(c)=\frac{f(b)-f(a)}{b-a}$. Therefore, if $f'(x)=0$, then $f(b)-f(a)=0$.  Thus, $f(b)=f(a)$. This means $f(x)$ is constant. $f(x)=c$. 
 
 \pagebreak
 \noindent
@@ -144,7 +144,7 @@ Suppose $a,b\in \mathbb{R}$, and $f(x)$ is differentiable $\forall x, x\in \math
 Thus, we can show that if we can find a straight line function such that $(a,f(a))$ and $(b,f(b))$ is on the graph we can thus proof if the slope exist then, there must be a $f'(c)$ exist such that $f'(c)=\frac{f(b)-f(a)}{b-a}$.
 
 \noindent
-Let the straight line's function be $h(x)$, then $h(x)=\frac{f(b)-f(a)}{b-a}\cdot{x}+t, t\in \mathbb{R}$. Since $h(a)=f(a),h(b)=f(b)$ then, $h(x)=\frac{f(b)-f(a)}{b-a}\cdot{x}+\frac{b(f(a))-a(f(b))}{b-a}$. Then we have $g(x)=f(x)-h(x)$. $g(a)=g(b)=0$. Thus, $g'(a)=g'(b)=0$. Then we have $g'(c)=f'(c)-h'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}=0$. Therefore,$f'(c)=\frac{f(b)-f(a)}{b-a}$. 
+Let the straight line's function be $h(x)$, then $h(x)=\frac{f(b)-f(a)}{b-a}\cdot{x}+t, t\in \mathbb{R}$. Since $h(a)=f(a),h(b)=f(b)$ then, $h(x)=\frac{f(b)-f(a)}{b-a}\cdot{x}+\frac{b(f(a))-a(f(b))}{b-a}$. Then we have $g(x)=f(x)-h(x)$. $g(a)=g(b)=0$. Thus, by Rolle's theorem, if $g(a)=g(b)=0$ then, $\exists c,$ such that $g'(c)=0$. Then, we have $g'(c)=f'(c)-h'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}=0$. Therefore,$f'(c)=\frac{f(b)-f(a)}{b-a}$. 
 
 \pagebreak
 \noindent
@@ -164,7 +164,16 @@ f'(c)=0.
 \textbf{Proof: }
 
 \noindent
-Suppose $a<b$, and $f:\R\to\R$ is differentiable, then there must be a $c\in [a,b]$ such that $f(c)\geq f(x),\forall x, x\in [a,b]$. Thus, we have a local maximum in range $[a,b]$. Based on Question 5, we know that if we have a local maximum at $c$, then $f'(c)=0$.\\
+\textbf{(I) Maximum inside the range} 
+
+\noindent
+Suppose $a<b$, and $f:\R\to\R$ is differentiable, then there must be a $c\in [a,b]$ such that $f(c)\geq f(x),\forall x, x\in [a,b]$. Thus, we have a local maximum in range $[a,b]$. Based on Question 5, we know that if we have a local maximum at $c$, then $f'(c)=0$.
+
+\noindent
+\textbf{(II) Maximum at the end of the range}
+
+\noindent
+Suppose $a<b$, and $f:\R\to\R$ is differentiable, and we have $f(a)=f(b)$ and both of them are the maximum within the range. Since $a,b$ are the maximum point of the function in that range, then there must exist a $c$ such that $f(c)$ is the smallest within the range. Also, we know that $f$ is differentiable everywhere. Then we have $\displaystyle{\lim_{h\to 0}}\frac{f(c+h)-f(c)}{h}$ exist and $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}=\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}$. On the left hand side of the above equality, because we know $f(c+h)>f(c)$, we have a positive numerator and a positive $h$. Then, $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}\geq 0$. For the right hand side, we know $f(c-h)>f(c)$, then $\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}\leq 0$. Since left hand side is equal to the right hand side, we have $f'(c)=0$.\\
 
 \noindent
 \textbf{Question 5}
@@ -182,7 +191,7 @@ f'(c)=0.
 \textbf{Proof: }
 
 \noindent
-Suppose $f$ is differentiable at $c$ and $f(c)$ is a local maximum. Therefore, we should be looking at the two sides of this local maximum. Such that we will have $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}$. The denominator is negative because $f(c)$ is local maximum, and $h$ is positive. Then, we know $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}\leq 0$. On the other hand, $\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}$. The denominator is negative because $f(c)$ is local maximum, and $h$ is negative. Then, we have $\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}\geq 0$. Thus, $\displaystyle{\lim_{h\to 0}}\frac{f(c+h)-f(c)}{h} = 0$. \\
+Suppose $f$ is differentiable at $c$ and $f(c)$ is a local maximum. Then, we know $\displaystyle{\lim_{h\to 0}}\frac{f(c+h)-f(c)}{h}$ exist and $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}=\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}$. Therefore, we should be looking at the two sides of this local maximum. Such that we will have $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}$. The numerator is negative because $f(c)$ is local maximum, and $h$ is positive. Then, we know $\displaystyle{\lim_{h\to 0+}}\frac{f(c+h)-f(c)}{h}\leq 0$. On the other hand, $\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}$. The denominator is negative because $f(c)$ is local maximum, and $h$ is negative. Then, we have $\displaystyle{\lim_{h\to 0-}}\frac{f(c+h)-f(c)}{h}\geq 0$. Thus, $\displaystyle{\lim_{h\to 0}}\frac{f(c+h)-f(c)}{h} = 0$. \\
 
 \noindent
 \textbf{Question 6}
@@ -218,7 +227,7 @@ right- and left-handed limits of $f$ at $a$
 exist and they both equal $L$.
 
 \noindent
-Conversely, suppose $\displaystyle{\lim_{x\to a+}}f(x)=\displaystyle{\lim_{x\to a-}}f(x)=L$. Therefore, we can assume for the right-handed limit if $a<x<a+\delta$, then $|f(x)-L|<\epsilon$. Also, for the left-handed limit we have if $a>x>a-\delta$, then $|f(x)-L|<\epsilon$. Thus, we know if both $0<x-a<\delta$ and $0>x-a>-\delta$, then $|f(x)-L|<\epsilon$. Therefore, if $0<|x-a|<\delta$, then $|f(x)-L|<\epsilon$. 
+Conversely, suppose $\displaystyle{\lim_{x\to a+}}f(x)=\displaystyle{\lim_{x\to a-}}f(x)=L$. Then we know that $\forall \epsilon >0, \exists \delta_1>0$, such that if $a<x<a+\delta_1$, then $|f(x)-L<\epsilon|$ and $\forall \epsilon >0, \exists \delta_2>0$, such that if $a-\delta_2<x<a$, then $|f(x)-L<\epsilon|$. Let $\delta=min(\delta_1,\delta_2)$. Then we can have $\forall \epsilon$, if $a<x<a+\delta$, then $|f(x)-L<\epsilon|$ and if $a-\delta<x<a$, then $|f(x)-L<\epsilon|$. Therefore, if $0<|x-a|<\delta$, then $|f(x)-L|<\epsilon$. 
 
 \noindent
 Thus, $\displaystyle{\lim_{x\to a}}f(x)=L$ if and only if both right-handed and left-handed limit has the same value.
