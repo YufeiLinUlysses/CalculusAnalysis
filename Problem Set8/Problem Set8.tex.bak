@@ -78,4 +78,79 @@ Nov \(25^{th}\) 2019
 
 \noindent
 Suppose that $f:[a,b]\rightarrow\mathbb{R}$, is integrable, and suppose that $m=inf\{f(x):x\in [a,b]\}$ and $M=sup\{f(x):x\in [a,b]\}$. Then, we have $m(b-a)\leq \int_{a}^{b}f\leq M(b-a)$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Lemma: Suppose $f:[a,b]\rightarrow\mathbb{R}$ is integrable and suppose that $P$ is any partition $[a,b]$. Then we have $L(f,P)\leq \int_{a}^{b}f\leq U(f,P)$.
+
+\noindent
+Proof of Lemma:
+
+\noindent
+We will prove this lemma from two parts:
+
+\noindent
+First, we prove that $L(f,P)\leq \int_{a}^{b}f$.
+
+\noindent
+Since $f$ is integrable, then we know $sup\{L(f,P)|P, \text{a partition in range }[a,b]\}=\int_{a}^{b}f$. And let $A=\{L(f,P)|P, \text{a partition in range }[a,b]\}$. Then $supA$ is the least upper bound of $A$. Let $y=supA$, then $\forall x \in A, x\leq y$. Then, because we have $y=\int_{a}^{b}f$, $\forall x\in A, x\leq y=\int_{a}^{b}f$. Thus, $L(f,P)\leq \int_{a}^{b}f$. 
+
+\noindent
+Then, we prove that $\int_{a}^{b}f\leq U(f,P)$. 
+
+\noindent
+Since $f$ is integrable, we know $inf\{U(f,P)|P, \text{a partition in range }[a,b]\}=\int_{a}^{b}f$. And let $B=\{U(f,P)|P, \text{a partition in range }[a,b]\}$. Let $z=infB$, then $\forall x\in B, z\leq x$. Therefore, since we have $U(f,P)\geq \int_{a}^{b}f$. 
+
+\noindent
+Thus, $L(f,P)\leq \int_{a}^{b}f\leq U(f,P)$.
+
+\noindent
+From the definition, $L(f,P)=\sum_{i=1}^{n}m_i(t_i-t_{i-1})$ and $U(f,P)=\sum_{i=1}^{n}M_i(t_i-t_{i-1})$. In this case, we have the partition $P$ as $[a,b]$ meaning there's only one pair of $m$ and $M$, and $t_i = b$, $t_{i-1}=a$. Therefore, we have $L(f,P)=m(b-a)$ and $U(f,P)=M(b-a)$. Thus, from the lemma we know that $m(b-a)\leq \int_{a}^{b}f\leq M(b-a)$. \\
+
+\noindent
+\textbf{Question 2}
+
+\noindent
+Prove that the function $f:[-1,1]\to\R$,
+defined by 
+\[
+f(n) = \begin{cases} 1 &\mbox{if } x\geq 0 \\
+0 & \mbox{if } x<0 \end{cases},
+\]
+is integrable on $[-1,1]$. 
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+At first we choose the partition $P=\{-1,0,1\}$. Then, by definition, $L(f,P)=\sum_{i=1}^{n}m_i(t_i-t_{i-1})$ and $U(f,P)=\sum_{i=1}^{n}M_i(t_i-t_{i-1})$. Therefore, we have, 
+\begin{align*}
+L(f,P)&=\sum_{i=1}^{2}m_i(t_i-t_{i-1})\\
+&=m_1\cdot{(t_1-t_0)}+m_2\cdot{(t_2-t_1)}\\
+&=0\cdot{(-0+1)}+1\cdot{(1-0)}\\
+&=1
+\end{align*}
+and 
+\begin{align*}
+U(f,P)&=\sum_{i=1}^{2}M_i(t_i-t_{i-1})\\
+&=M_1\cdot{(t_1-t_0)}+M_2\cdot{(t_2-t_1)}\\
+&=1\cdot{(-0+1)} + 1\cdot{(1-0)}\\
+&=2
+\end{align*}
+
+\noindent
+Thus, we have $1\leq \int_{a}^{b}f\leq 2$.
+
+\noindent
+Then, suppose $f$ is not integrable on $[-1,1]$. Therefore, $\forall \epsilon\in \mathbb{R}, \epsilon>0$ such that if $P=\{-1,-\epsilon,1\},$ then, $L(f,P)<U(f,P)$. Therefore, we have 
+\begin{align*}
+U(f,P)&=\sum_{i=1}^{2}M_i(t_i-t_{i-1})\\
+&=M_1\cdot{(t_1-t_0)}+M_2\cdot{(t_2-t_1)}\\
+&=0\cdot{(-\epsilon+1)}+1\cdot{(1+\epsilon)}\\
+&=1+\epsilon
+\end{align*}
+Then, $1+\epsilon\geq \int_{a}^{b}f$. Also we have $1\leq \int_{a}^{b}f$. Therefore, $0\leq \int_{a}^{b}f-1\leq \epsilon$. Since $f$ is not integrable, then we have $0< \int_{a}^{b}f-1$. Let $\delta =\int_{a}^{b}f-1, \delta>0$. Since $\epsilon>0$, therefore, $\exists \epsilon, \delta>\epsilon>0$. Thus, $\exists \epsilon, \int_{a}^{b}f-1>\epsilon>0$ 
+
 \end{document}
