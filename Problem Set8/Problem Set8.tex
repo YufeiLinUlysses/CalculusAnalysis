@@ -15,6 +15,8 @@
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \usepackage{url,graphicx,enumitem}
 
@@ -151,8 +153,149 @@ U(f,P)&=\sum_{i=1}^{2}M_i(t_i-t_{i-1})\\
 &=0\cdot{(-\epsilon+1)}+1\cdot{(1+\epsilon)}\\
 &=1+\epsilon
 \end{align*}
-Then, $1+\epsilon\geq \int_{a}^{b}f$. Also we have $1\leq \int_{a}^{b}f$. Therefore, $0\leq \int_{a}^{b}f-1\leq \epsilon$. Since $f$ is not integrable, then we have $0< \int_{a}^{b}f-1$. Let $\delta =\int_{a}^{b}f-1, \delta>0$. Since $\epsilon>0$, therefore, $\exists \epsilon, \delta>\epsilon>0$. Thus, $\exists \epsilon, \int_{a}^{b}f-1>\epsilon>0$. Then, we have $\int_{a}^{b}f>1+\epsilon$, which is a contradiction. Thus, $f$ is integrable on $[-1,1]$.  
+Then, $1+\epsilon\geq \int_{a}^{b}f$. Also we have $1\leq \int_{a}^{b}f$. Therefore, $0\leq \int_{a}^{b}f-1\leq \epsilon$. Since $f$ is not integrable, then we have $0< \int_{a}^{b}f-1$. Let $\delta =\int_{a}^{b}f-1, \delta>0$. Since $\epsilon>0$, therefore, $\exists \epsilon, \delta>\epsilon>0$. Thus, $\exists \epsilon, \int_{a}^{b}f-1>\epsilon>0$. Then, we have $\int_{a}^{b}f>1+\epsilon$, which is a contradiction. Thus, $f$ is integrable on $[-1,1]$.  \\
 
+\noindent
+\textbf{Question 3}
 
+\noindent
+Suppose that $f:[a,b]\to\R$,
+is bounded. Then $f$ is integrable on $[a,b]$
+if, and only if, for every $\epsilon>0$, there
+exists a partition $P$ of $[a,b]$ such
+that
+\[
+U(f,P)-L(f,P)<\epsilon.
+\]
 
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $f$ is integrable on $[a,b]$. \\
+
+\noindent
+\textbf{Question 4}
+
+\noindent
+Use the theorem you proved in 
+question \#\ref{epsilon} to solve 
+question \#\ref{heaviside} again 
+in a slightly different way. (It 
+should be easier this way, but it is
+worth doing it both ways.)
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+sdfsdf\\
+
+\noindent
+\textbf{Chpater 13. \#1}
+
+\noindent
+Prove that $\int_{0}^{b}x^3dx=\frac{b^4}{4}$, by considering partitions into $n$ equal intervals. 
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Since we are going to have a partition with $n$ intervals, then we would have $P=\{t_0,t_1,...,t_n\}$ with $t_0=0, t_i=i\cdot{\frac{b}{n}}$. Then, we have
+\begin{align*}
+L(f,P_n)&=\sum_{i=1}^{n}t_{i-1}^{3}(t_i-t_{i-1})\\
+&=\sum_{i=1}^{n}(\frac{(i-1)\cdot{b}}{n})^{3}\cdot{\frac{b}{n}}\\
+&=(\frac{b}{n})^4\cdot{\sum_{i=1}^{n}(i-1)^{3}}\\
+&=(\frac{b}{n})^4\cdot{\sum_{j=0}^{n-1}j^{3}}
+\end{align*}
+\begin{align*}
+U(f,P_n)&=\sum_{i=1}^{n}t_{i}^{3}(t_i-t_{i-1})\\
+&=\sum_{i=1}^{n}(\frac{i\cdot{b}}{n})^{3}\cdot{\frac{b}{n}}\\
+&=(\frac{b}{n})^4\cdot{\sum_{i=1}^{n}i^{3}}
+\end{align*}
+From the previous question Chapter 2 \#6, we know that $\sum_{i=1}^{n}i^3=\frac{n^4}{4}+\frac{n^3}{2}+\frac{n^2}{2}$, and the equation could be written:
+\begin{align*}
+L(f,P_n)&=(\frac{b}{n})^4\cdot{(\frac{(n-1)^4}{4}+\frac{(n-1)^3}{2}+\frac{(n-1)^2}{4})}\\
+&=(\frac{b}{n})^4\cdot{\frac{1}{4}}((n-1)^4+2(n-1)^3+(n-1)^2)\\
+&=\frac{b^4}{4}\cdot{(\frac{(n-1)^4}{n^4}+\frac{2(n-1)^3}{n^4}+\frac{(n-1)^2}{n^4})}\\
+U(f,P_n)&=(\frac{b}{n})^4\cdot{(\frac{n^4}{4}+\frac{n^3}{2}+\frac{n^2}{4})}\\
+&=(\frac{b}{n})^4\cdot{\frac{1}{4}}(n^4+2n^3+n^2)\\
+&=\frac{b^4}{4}\cdot{(1+\frac{2}{n}+\frac{1}{n^2})}
+\end{align*}
+Since $n\geq 1, n\in \mathbb{N}$, therefore, we know when $n$ gets very large both $U(f,P_n)$ and $L(f,P_n)$ are close to $\frac{b^4}{4}$. At the same time, we find that \[U(f,P_n)-L(f,P_n)=\frac{b^4}{4}(\frac{2n^3-1}{n^4})\] which is a positive number. And we can make this difference as small as possible, by theorem 2, this function is integrable. Therefore, we have $U(f,P_n)\geq \frac{b^4}{4} \geq L(f,P_n)$. Thus, $\int_{0}^{b}x^3dx=\frac{b^4}{4}$. \\
+
+\noindent
+\textbf{Chpater 13. \#13}
+
+\noindent
+\textbf{(a)} Prove that if $f$ is integrable on $[a,b]$ and $f(x)\geq 0$ for all $x$ in $[a,b]$, then $\int_{a}^{b}f\geq 0$. 
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Since $f$ is integrable on $[a,b]$, then we have $U(f,P_n)\geq \int_{a}^{b}f \geq L(f,P_n)$. Also, based on the definition, we have:
+\begin{align*}
+L(f,P_n)&=\sum_{i=1}^{n}f(t_{i-1})(t_i-t_{i-1})\\
+U(f,P_n)&=\sum_{i=1}^{n}f(t_{i})(t_i-t_{i-1})\\
+\end{align*}
+Also, because $f(x)\geq 0, \forall x\in [a,b]$ and $t_{i-1}\in[a,b], \forall i\in \mathbb{N}, i\leq n$, then $f(t_{i-1})\geq 0$. Also, because the definition of $t_i$ guarantees, $t_i>t_{i-1}$, then $t_i-t_{i-1}>0$ Therefore, let $q_i=f(t_{i-1})(t_i-t_{i-1})$, since both $f(t_{i-1})$ and$(t_i-t_{i-1})$ are greater than or equal to $0$. We have $q_i\geq 0$. Similarly, because $t_i\in [a,b], \forall i\in \mathbb{N}, i\leq n$, then $f(t_i)\geq 0$. Let $p_i=f(t_{i})(t_i-t_{i-1})$. Because both $f(t_{i-1})$ and$(t_i-t_{i-1})$ are both greater than or equal to $0$. Then, $p_i\geq 0$. Thus, we have $U(f,P_n)\geq \int_{a}^{b}f \geq L(f,P_n)\geq 0$. Thus, $\int_{a}^{b}f \geq 0$.\\
+
+\noindent
+\textbf{(b)}Prove that if $f$ and $g$ are both integrable on $[a,b]$ and $f(x)\geq g(x), \forall x\in [a,b]$, then $\int_{a}^{b}f\geq \int_{a}^{b}g$. 
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+Suppose $f$ and $g$ are both integrable on $[a,b]$ and $f(x)\geq g(x), \forall x\in [a,b]$. Then, we know that $f(x)-g(x)\geq 0$. Thus, $(f-g)(x)\geq 0, \forall x\in [a,b]$. Furthermore, from theorem 5, we know that for any two functions that are integrable at the same range, we have $\int_{a}^{b}f+\int_{a}^{b}g=\int_{a}^{b}(f+g)$. Furthermore, from theorem 6 we know that $\int_{a}^{b}cg=c\cdot{\int_{a}^{b}g}$. Thus, $\int_{a}^{b}-g=-\int_{a}^{b}g$. Then, we have $\int_{a}^{b}f-\int_{a}^{b}g=\int_{a}^{b}(f-g)$. Let $L(x)=(f-g)(x)$, then $\int_{a}^{b}(f-g)=\int_{a}^{b}L$ and from the previous theorem that if $f$ is integrable on $[a,b]$ and $f(x)\geq 0$ for all $x$ in $[a,b]$, then $\int_{a}^{b}f\geq 0$. We know that $\int_{a}^{b}L\geq 0$. Thus $\int_{a}^{b}f-\int_{a}^{b}g=\int_{a}^{b}(f-g)=\int_{a}^{b}L\geq 0$. Therefore, $\int_{a}^{b}f\geq \int_{a}^{b}g$.\\
+
+\noindent
+\textbf{Chpater 13. \#20}
+
+\noindent
+Suppose that $f$ is nondecreasing on $[a,b]$. Notice that $f$ is automatically bounded on $[a,b]$, because $f(a)\geq f(x)\geq f(b), \forall x\in [a,b]$.
+
+\noindent
+\textbf{(a)}If $P=\{t_0,t_1,...,t_n\}$ is a partition of $[a,b]$, then what is $L(f,P)$ and $U(f,P)$
+
+\noindent
+\textbf{Answer: }
+
+\noindent
+By definition of $L(f,P)$ and $U(f,P)$, we have the following:
+\begin{align*}
+L(f,P_n)&=\sum_{i=1}^{n}f(t_{i-1})(t_i-t_{i-1})\\
+U(f,P_n)&=\sum_{i=1}^{n}f(t_{i})(t_i-t_{i-1})\\
+\end{align*}
+
+\noindent
+\textbf{(b)}Suppose that $t_{i}-t_{i}=\delta$ for each $i$. Prove that $U(f,P_n)-L(f,P_n)=\delta\cdot(f(b)-f(a))$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Suppose $t_{i}-t_{i}=\delta$ for each $i$. Therefore, we know that 
+\begin{align*}
+U(f,P_n)-L(f,P_n)&=\sum_{i=1}^{n}f(t_{i})(t_i-t_{i-1})-\sum_{i=1}^{n}f(t_{i-1})(t_i-t_{i-1})\\
+&=\sum_{i=1}^{n}(f(t_{i})\cdot{\delta})-\sum_{i=1}^{n}(f(t_{i-1})\cdot{\delta})\\
+&=\delta\cdot{(\sum_{i=1}^{n}(f(t_{i})-\sum_{i=1}^{n}(f(t_{i-1})))}\\
+&=\delta\cdot{(\sum_{i=1}^{n}(f(t_{i})-f(t_{i-1}))}\\
+&=\delta\cdot{(f(b)-f(a))}
+\end{align*}
+Based on the idea that this equations is a nondecreasing equation, then we know that $f(a)\geq f(x)\geq f(b), \forall x\in [a,b]$. Meaning, the largest possible value of $f(t_i)\geq f(b)$ for each $i$.  \\
+
+\noindent
+\textbf{(d)} Give an example of a nondecreasing function on $[0,1]$ which is discontinuous at infinitely many points. 
+
+\noindent
+\textbf{Example: }
+
+ $y =
+    \begin{cases}
+      0 & x=0\\
+      \frac{1}{\floor*{\frac{1}{x}}} & 0<x<1\\
+      1 & x=1
+    \end{cases}  $
 \end{document}
