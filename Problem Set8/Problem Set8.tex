@@ -172,15 +172,23 @@ U(f,P)-L(f,P)<\epsilon.
 \textbf{Proof: }
 
 \noindent
-Suppose $f$ is integrable on $[a,b]$. \\
+Suppose $\forall \epsilon > 0U(f,P)-L(f,P)<\epsilon $, then we know by definition of $sup\{L(f,P)\}$ and $inf\{U(f,P)\}$ that $sup\{L(f,P\}\geq L(f,P)$, $inf\{U(f,P)\}\leq U(f,P)$ and $inf\{U(f,P)\}\geq sup\{L(f,P\}$. Thus, $0\leq inf\{U(f,P)\}-sup\{L(f,P)\}\leq U(f,P)-L(f,P)<\epsilon$. Let $\delta=inf\{U(f,P)\}-sup\{L(f,P)\}$. Suppose $\delta > 0$. Since $\forall \epsilon>0 \delta<\epsilon$. But we have $a=\delta-0=\delta$ such that if $\epsilon<a=\delta$, then, we have $0<\epsilon<\delta$ and we reach a contradiction. Therefore, $\delta=0$. Thus, $inf\{U(f,P)\} = sup\{L(f,P)\}$. Then, $f$ is integrable on $[a,b]$, based on the definition. 
+
+\noindent
+Conversely, suppose $f$ is integrable on $[a,b]$. Therefore, we know that $inf\{U(f,P)\} = sup\{L(f,P)\}$. Also, we know that  $sup\{L(f,P)\}\geq L(f,P)$ and $inf\{U(f,P)\}\leq U(f,P)$. Therefore, $0=inf\{U(f,P)\}-sup\{L(f,P)\}\leq U(f,P)-L(f,P)$. Suppose $\exists \epsilon>0$ such that $\forall P, U(f,P)-L(f,P)>\epsilon$. Therefore, we would have $inf\{U(f,P)\}-sup\{L(f,P)\} = 0>\epsilon$. Then, we have a contradiction. Therefore, we know that if $f$ is integrable on $[a,b]$, then $\forall \epsilon >0$ there
+exists a partition $P$ of $[a,b]$ such
+that
+$
+U(f,P)-L(f,P)<\epsilon.
+$\\
 
 \noindent
 \textbf{Question 4}
 
 \noindent
 Use the theorem you proved in 
-question \#\ref{epsilon} to solve 
-question \#\ref{heaviside} again 
+question \#3 to solve 
+question \#2 again 
 in a slightly different way. (It 
 should be easier this way, but it is
 worth doing it both ways.)
@@ -189,7 +197,12 @@ worth doing it both ways.)
 \textbf{Proof: }
 
 \noindent
-sdfsdf\\
+Suppose $P=\{t_0,t_1,...,t_n\}$ is a partition of $[-1,1]$ with $t_j = 0, j \in \mathbb{Z}, j \in [0,n]$. Then, we have when $i<j$, $m_i=M_i=0$ and if $i>j$, we have $m_i=M_i=1$, $m_j=0$ and $M_j=1$. Since we have:
+\begin{align*}
+L(f,P_n)&=\sum_{i=1}^{j-1}m_i(t_i-t_{i-1})+m_j(t_j-t_{j-1})+\sum_{i=j+1}^{n}m_i(t_i-t_{i-1})\\
+U(f,P_n)&=\sum_{i=1}^{j-1}M_i(t_i-t_{i-1})+M_j(t_j-t_{j-1})+\sum_{i=j+1}^{n}M_i(t_i-t_{i-1})\\
+\end{align*}
+Then, $U(f,P)-L(f,P)=t_j-t_{j-1}$. Suppose $\epsilon >0$ and assume $P$ with an interval such that $t_i-t_{i-1}<\epsilon$, for each $i$. Thus, we have $t_j-t_{j-1}<\epsilon$ and therefore, $f$ is integrable. \\
 
 \noindent
 \textbf{Chpater 13. \#1}
@@ -270,21 +283,31 @@ U(f,P_n)&=\sum_{i=1}^{n}f(t_{i})(t_i-t_{i-1})\\
 \end{align*}
 
 \noindent
-\textbf{(b)}Suppose that $t_{i}-t_{i}=\delta$ for each $i$. Prove that $U(f,P_n)-L(f,P_n)=\delta\cdot(f(b)-f(a))$.
+\textbf{(b)}Suppose that $t_{i}-t_{i-1}=\delta$ for each $i$. Prove that $U(f,P_n)-L(f,P_n)=\delta\cdot(f(b)-f(a))$.
 
 \noindent
 \textbf{Proof: }
 
 \noindent
-Suppose $t_{i}-t_{i}=\delta$ for each $i$. Therefore, we know that 
+Suppose $t_{i}-t_{i-1}=\delta$ for each $i$. Therefore, we know that 
 \begin{align*}
 U(f,P_n)-L(f,P_n)&=\sum_{i=1}^{n}f(t_{i})(t_i-t_{i-1})-\sum_{i=1}^{n}f(t_{i-1})(t_i-t_{i-1})\\
 &=\sum_{i=1}^{n}(f(t_{i})\cdot{\delta})-\sum_{i=1}^{n}(f(t_{i-1})\cdot{\delta})\\
 &=\delta\cdot{(\sum_{i=1}^{n}(f(t_{i})-\sum_{i=1}^{n}(f(t_{i-1})))}\\
 &=\delta\cdot{(\sum_{i=1}^{n}(f(t_{i})-f(t_{i-1}))}\\
+&=\delta\cdot{((f(t_1)-f(t_0))+(f(t_2)-f(t_1))+...+(f(t_n)-f(t_{n-1})))}\\
+&=\delta\cdot{(f(t_n)-f(t_0))}\\
 &=\delta\cdot{(f(b)-f(a))}
 \end{align*}
-Based on the idea that this equations is a nondecreasing equation, then we know that $f(a)\geq f(x)\geq f(b), \forall x\in [a,b]$. Meaning, the largest possible value of $f(t_i)\geq f(b)$ for each $i$.  \\
+ 
+\noindent
+\textbf{(c)}Prove $f$ is integrable.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Since we have $U(f,P_n)-L(f,P_n)=\delta\cdot{(f(b)-f(a))}$ and $\delta$ is arbitrary and $f(b)-f(a)$ is given because we know $f$ and both $f(a)$ and $f(b)$ exist. Therefore, we could have $\forall \epsilon>0, \exists \delta<\frac{\epsilon}{f(b)-f(a)}$. Then, we have $\delta\cdot{(f(b)-f(a))}<\epsilon$ and $U(f,P_n)-L(f,P_n)<\epsilon$. \\
 
 \noindent
 \textbf{(d)} Give an example of a nondecreasing function on $[0,1]$ which is discontinuous at infinitely many points. 
@@ -297,5 +320,92 @@ Based on the idea that this equations is a nondecreasing equation, then we know 
       0 & x=0\\
       \frac{1}{\floor*{\frac{1}{x}}} & 0<x<1\\
       1 & x=1
-    \end{cases}  $
+    \end{cases}  $\\
+    
+\noindent
+\textbf{Chapter 13 \#23}
+
+\noindent
+\textbf{(a)}Prove that if $f$ is integrable on $[a,b]$ and $m\leq f(x)\leq M$ for all $x$ in $[a,b]$, then $\int_a^bf(x)dx=(b-a)\mu$, for some number $\mu$ with $m\leq \mu\leq M$.
+
+\noindent
+\textbf{Proof:}
+
+\noindent
+From Theorem 7, we have if $f$ is integrable on $[a,b]$ and $m\leq f(x)\leq M$, then $m(b-a)\leq \int_{a}^{b}f\leq M(b-a)$. Let $q = \int_{a}^{b}f$. Then, $m(b-a)\leq q\leq M(b-a)$. 
+
+\noindent
+Assume $b-a=0$, then we have $0\leq q \leq 0$, meaning $q=0$. We also know that every number is a factor of $0$. Therefore, the assumption holds that if $f$ is integrable on $[a,b]$ and $m\leq f(x)\leq M$ for all $x$ in $[a,b]$, then $\int_a^bf(x)dx=(b-a)\mu$, for some number $\mu$ with $m\leq \mu\leq M$.
+
+\noindent
+Let $(b-a)>0$, we have $m\leq \frac{q}{(b-a)}\leq M$. Thus, let $\mu = \frac{q}{(b-a)}$, then $m\leq \mu\leq M$ and $q=\mu\cdot{(b-a)}=\int_{a}^{b}f$. Thus, if $f$ is integrable on $[a,b]$ and $m\leq f(x)\leq M$ for all $x$ in $[a,b]$, then $\int_a^bf(x)dx=(b-a)\mu$, for some number $\mu$ with $m\leq \mu\leq M$.\\
+
+\noindent
+\textbf{(b)}Prove that if $f$ is continuous on $[a,b]$, then $\int_a^bf(x)dx=(b-a)f(\xi)$, for some number $\xi$ in $[a,b]$. and show by an example that continuity is essential.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+From Chpater 7, Theorem 4, we know that if $f$ is continuous on $[a,b]$, and $f(a)<c<f(b)$, then there is some $x$ in $[a,b]$ such that $f(x) = c$. Therefore, from the previous problem we have shown that $\int_a^bf(x)dx=(b-a)\mu$, for some number $\mu$ with $m\leq \mu\leq M$, then we know that from this theorem, since $f$ is continuous, we have there exists $\xi \in [a,b]$ such that $f(\xi )=\mu$.
+This continuous is essential because if we have a $g(x)=
+\begin{cases}
+f(x) & x\neq \xi\\
+k, k\in \mathbb{R}, k\neq f(\xi) &x=\xi
+\end{cases}$, then this assumption does not hold since there is no $f(x)=\mu$. 
+\\
+
+\noindent
+\textbf{(c)}More generally suppose that $f$ is continuous on $[a,b]$ and that $g$ is integrable and nonnegative on $[a,b]$. Prove that $\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx$ for some number $\xi$ in $[a,b]$. This is called the Mean Value Theorem in Integrals. 
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+From the assumption $m\leq f(x)\leq M$, we know $mg(x)\leq f(x)g(x)\leq Mg(x)$. Therefore, we have $\int_a^bmg(x)dx\leq  \int_a^bf(x)g(x)dx \leq \int_a^bMg(x)dx$. And from theorem 6, we have this inequality rewritten as $m\int_a^bg(x)dx\leq  \int_a^bf(x)g(x)dx \leq M\int_a^bg(x)dx$. Let $q =\int_a^bf(x)g(x)dx$, then we have $m\int_a^bg(x)dx\leq  q \leq M\int_a^bg(x)dx$.
+
+\noindent
+Assume $\int_a^bg(x)dx=0$, then we have $0\leq q\leq 0$ and therefore, $q =0$. Thus, $\forall x \in [a,b], f(x)\cdot\int_a^bg(x)dx=0$ and therefore holds the claim that $\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx$ for some number $\xi$ in $[a,b]$.
+
+\noindent
+Furthermore, if $\int_a^bg(x)dx>0$, then we have $m\leq \frac{q}{\int_a^bg(x)dx}\leq M$. Let $\mu = \frac{q}{\int_a^bg(x)dx}$. Thus, we know from part (b) that $\exists \xi$ such that $f(\xi)=\mu$ and $f(\xi)\int_a^bg(x)dx=\int_a^bf(x)g(x)dx$.\\
+
+\noindent
+\textbf{(d)}Deduce the same result if $g$ is integrable and nonpositive on $[a,b]$.
+
+\noindent
+\textbf{Proof: }
+
+\noindent
+Since we have $g(x)$ as a nonpositive number, then we multiply the original inequality $m\leq f(x)\leq M$ by $-g(x)$. Then, we have $-mg(x)\leq -f(x)g(x)\leq -Mg(x)$. Therefore, we know that $\int_a^b-mg(x)dx\leq  \int_a^b-f(x)g(x)dx \leq \int_a^b-Mg(x)dx$. Then, we know $m\int_a^b-g(x)dx\leq  \int_a^b-f(x)g(x)dx \leq M\int_a^b-g(x)dx$. 
+
+\noindent
+Similarly from previous proof, if $\int_a^b-g(x)dx=0$, then we know that $\int_a^b-f(x)g(x)dx=0$. Thus, we also have $\forall x, x\in[a,b], f(x)\int_a^bg(x)dx=0$. And therefore, the statement holds.
+
+\noindent
+Furthermore, we have $\int_a^b-g(x)dx>0$. Then, let $\mu = \frac{\int_a^b-f(x)g(x)dx}{\int_a^b-g(x)dx}$. We know that $m< \mu <M$. From Chapter 7 theorem 4 we know that there exists $\xi$ such that $f(\xi)=\mu$ and therefore, the statement holds.\\
+
+\noindent
+\textbf{(e)}Show that one of these two hypotheses for $g$ is essential. 
+
+\noindent
+\textbf{Answer: }
+
+\noindent
+If $g(x)=x^3$ on $[-1,1]$ and $f(x)=x$, then we have 
+\begin{align*}
+\int_{-1}^1f(x)g(x)dx&=\int_{-1}^1x^4dx\\
+&=\frac{x^5}{4}]_{-1}^{1}\\
+&=\frac{1}{2}
+\end{align*}
+
+\noindent
+Then, we have 
+\begin{align*}
+int_{-1}^1f(x)dx&=\frac{x^2}{2}]_{-1}^1\\
+&=0\\
+int_{-1}^1g(x)dx&=\frac{x^4}{3}]_{-1}^1\\
+&=\frac{2}{3}
+\end{align*}
+Therefore, we have $\mu =0$ and $\mu\cdot int_{-1}^1g(x)dx=0\neq \frac{1}{2}$, and the statement does not hold. 
 \end{document}
