@@ -153,7 +153,7 @@ U(f,P)&=\sum_{i=1}^{2}M_i(t_i-t_{i-1})\\
 &=0\cdot{(-\epsilon+1)}+1\cdot{(1+\epsilon)}\\
 &=1+\epsilon
 \end{align*}
-Then, $1+\epsilon\geq \int_{a}^{b}f$. Also we have $1\leq \int_{a}^{b}f$. Therefore, $0\leq \int_{a}^{b}f-1\leq \epsilon$. Since $f$ is not integrable, then we have $0< \int_{a}^{b}f-1$. Let $\delta =\int_{a}^{b}f-1, \delta>0$. Since $\epsilon>0$, therefore, $\exists \epsilon, \delta>\epsilon>0$. Thus, $\exists \epsilon, \int_{a}^{b}f-1>\epsilon>0$. Then, we have $\int_{a}^{b}f>1+\epsilon$, which is a contradiction. Thus, $f$ is integrable on $[-1,1]$.  \\
+Then, $1+\epsilon\geq inf\{U(f,P)\}$. Let $\delta=inf\{U(f,P)\}-sup\{L(f,P)\}$ and $\delta >0$. Also we have $1\leq sup\{L(f,P)\}$. Therefore, $\delta =  inf\{U(f,P)\}-sup\{L(f,P)\} \leq 1+\epsilon-1=\epsilon$. Therefore, we have $\forall \epsilon>0, \forall \delta>0, \delta<\epsilon$ which is a contradiction. Thus, $f$ is integrable on $[-1,1]$.  \\
 
 \noindent
 \textbf{Question 3}
@@ -172,10 +172,10 @@ U(f,P)-L(f,P)<\epsilon.
 \textbf{Proof: }
 
 \noindent
-Suppose $\forall \epsilon > 0U(f,P)-L(f,P)<\epsilon $, then we know by definition of $sup\{L(f,P)\}$ and $inf\{U(f,P)\}$ that $sup\{L(f,P\}\geq L(f,P)$, $inf\{U(f,P)\}\leq U(f,P)$ and $inf\{U(f,P)\}\geq sup\{L(f,P\}$. Thus, $0\leq inf\{U(f,P)\}-sup\{L(f,P)\}\leq U(f,P)-L(f,P)<\epsilon$. Let $\delta=inf\{U(f,P)\}-sup\{L(f,P)\}$. Suppose $\delta > 0$. Since $\forall \epsilon>0 \delta<\epsilon$. But we have $a=\delta-0=\delta$ such that if $\epsilon<a=\delta$, then, we have $0<\epsilon<\delta$ and we reach a contradiction. Therefore, $\delta=0$. Thus, $inf\{U(f,P)\} = sup\{L(f,P)\}$. Then, $f$ is integrable on $[a,b]$, based on the definition. 
+Suppose $\forall \epsilon > 0, U(f,P)-L(f,P)<\epsilon $, then we know by definition of $sup\{L(f,P)\}$ and $inf\{U(f,P)\}$ that $sup\{L(f,P\}\geq L(f,P)$, $inf\{U(f,P)\}\leq U(f,P)$ and $inf\{U(f,P)\}\geq sup\{L(f,P\}$. Thus, $0\leq inf\{U(f,P)\}-sup\{L(f,P)\}\leq U(f,P)-L(f,P)<\epsilon$. Let $\delta=inf\{U(f,P)\}-sup\{L(f,P)\}$. Suppose $\delta > 0$. Since $\forall \epsilon>0 \delta<\epsilon$. But we have $a=\delta-0=\delta$ such that if $\epsilon<a=\delta$, then, we have $0<\epsilon<\delta$ and we reach a contradiction. Therefore, $\delta=0$. Thus, $inf\{U(f,P)\} = sup\{L(f,P)\}$. Then, $f$ is integrable on $[a,b]$, based on the definition. 
 
 \noindent
-Conversely, suppose $f$ is integrable on $[a,b]$. Therefore, we know that $inf\{U(f,P)\} = sup\{L(f,P)\}$. Also, we know that  $sup\{L(f,P)\}\geq L(f,P)$ and $inf\{U(f,P)\}\leq U(f,P)$. Therefore, $0=inf\{U(f,P)\}-sup\{L(f,P)\}\leq U(f,P)-L(f,P)$. Suppose $\exists \epsilon>0$ such that $\forall P, U(f,P)-L(f,P)>\epsilon$. Therefore, we would have $inf\{U(f,P)\}-sup\{L(f,P)\} = 0>\epsilon$. Then, we have a contradiction. Therefore, we know that if $f$ is integrable on $[a,b]$, then $\forall \epsilon >0$ there
+Conversely, suppose $f$ is integrable on $[a,b]$ and $\exists \epsilon>0, \forall P: U(f,P)-L(f,P)>\epsilon$. Therefore, we know that $inf\{U(f,P)\} = sup\{L(f,P)\}$. Then we have $inf\{U(f,P)\}-sup\{L(f,P)\}=0$. By definition of $sup$ and $inf$, we could find $P'$ such that $U(f,P')$ is close to $inf\{U(f,P)\}$ and $P''$ such that $L(f,P'')$ is close to $sup\{L(f,P)\}$. Suppose we have $U(f,P')-L(f,P'')>\epsilon$ and let $U(f'P')-inf\{U(f,P')\}>\frac{\epsilon}{2}, L(f'P')-sup\{L(f,P')\}>\frac{\epsilon}{2}$, then we know that $sup\{L(f,P')\}-inf\{U(f,P)\}>0$ meaning $inf\{U(f,P)\}-sup\{L(f,P')\}<0$, so $f$ is not integrable. Therefore, we have a contradiction and if $f$ is integrable on $[a,b]$, then $\forall \epsilon >0$ there
 exists a partition $P$ of $[a,b]$ such
 that
 $
@@ -348,11 +348,16 @@ Let $(b-a)>0$, we have $m\leq \frac{q}{(b-a)}\leq M$. Thus, let $\mu = \frac{q}{
 
 \noindent
 From Chapter 7, theorem 3 and 6 we know that because $f$ is bounded in $[a,b]$, then $\exists K\geq f(x), \forall x \in [a,b]$ and $\exists O\leq f(x), \forall x \in [a,b]$, where in this case $K= M$ and $O=m$. Thus, we know that $\exists a' \in [a,b]$ such that $f(a')=m$ and $\exists b' \in [a,b]$ such that $f(b')=M$. From Chapter 7, theorem 4, we know that if $f$ is continuous on $[a,b]$, and $f(a)<c<f(b)$, then there is some $x$ in $[a,b]$ such that $f(x) = c$. Therefore, from the previous problem we have shown that $\int_a^bf(x)dx=(b-a)\mu$, for some number $\mu$ with $m=f(a')<\mu<f(b')=M$, then we know that from this theorem, since $f$ is continuous, we have there exists $\xi \in [a',b']$ such that $f(\xi )=\mu$.Also, because $[a',b']\subseteq [a,b]$. Therefore, $\xi \in [a,b]$. Thus, the statement holds.
-This continuous is essential because if we have a $g(x)=
-\begin{cases}
-f(x) & x\neq \xi\\
-k, k\in \mathbb{R}, k\neq f(\xi) &x=\xi
-\end{cases}$, then this assumption does not hold since there is no $f(x)=\mu$. 
+
+\noindent
+\textbf{Example}
+
+\noindent
+In order to prove that continuity is essential, we have the following example. Let $f(x)=x$ and $a=0, b=1$. We have $\int_a^bf(x)dx=\frac{1}{2}=(b-a)\mu=\mu$. Thus, we have $\mu = \frac{1}{2}$. And if we have \[g(x)=\begin{cases}
+x & x\neq \frac{1}{2}\\
+0 &x=\frac{1}{2}
+\end{cases}\]
+which does not have the value of $\mu$ in this equation. The loss of continuity cannot make this property stand. 
 \\
 
 \noindent
